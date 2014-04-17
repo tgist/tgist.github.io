@@ -11,7 +11,7 @@ redcarpet:
 # 参考 http://github.com/vmg/redcarpet/blob/master/README.markdown
 
 # 核心设置
-title : Havee's Space
+title : demo
 tagline: Site Tagline
 keywords : linux, gentoo, internet, sql, jekyll, BSD, MAC, havee
 description: Havee Hobbies, Linux Tips Record。
