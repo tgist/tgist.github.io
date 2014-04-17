@@ -15,7 +15,7 @@
 
 
     /* External links */
-    $(document).ready(function() {
+    /*$(document).ready(function() {
         $('a[href]').each(function() {
             if (this.href.indexOf(window.location.host) == -1) $(this).attr({target: '_blank' });
         });
@@ -26,7 +26,7 @@
             $('html,body').animate({scrollTop: targetOffset}, 400);
             return false;
         });
-    });
+    });*/
 
 
     /* site search */
@@ -78,9 +78,10 @@
                 var entry = entries[i];
                 var title = $(entry.getElementsByTagName('title')[0]).text();
                 var link = $(entry.getElementsByTagName('link')[0]).attr('href');
-                var title_en = rl.exec(link)[1].replace(/-/g, ' ');
+                //var title_en = rl.exec(link)[1].replace(/-/g, ' ');
                 var content = $(entry.getElementsByTagName('content')[0]).text();
-                if (rq.test(title) || rq.test(title_en) || rq.test(content)) {
+                //if (rq.test(title) || rq.test(title_en) || rq.test(content)) {
+                if (rq.test(title) || rq.test(content)) {
                     var updated = formatDate(xmlDateToJavascriptDate($(entry.getElementsByTagName('updated')[0]).text()));
                     matches.push({'title': title, 'link': link, 'date': updated, 'content': content});
                 }
