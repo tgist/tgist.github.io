@@ -86,7 +86,7 @@ JB :
 
   # 一键分享
   sharing :
-    provider : baidu
+    provider :                      # 参考 _includes/JB/sharing
 
   # CDN 加速资源
   cdn :
