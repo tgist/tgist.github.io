@@ -1,0 +1,9 @@
+      {% include custom/asides/categories %}
+
+      {% include custom/asides/recently_posts %}
+
+      {% include custom/asides/recently_comments %}
+
+      {% include custom/asides/recently_visitors %}
+
+      {% include custom/asides/blogroll %}

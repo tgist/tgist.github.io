@@ -1,0 +1,39 @@
+---
+layout: nill
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Page not found - {{ site.title }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="/favicon.png">
+
+<script type="text/javascript">
+function countDown(secs,surl){
+  //alert(surl);
+  var jumpto = document.getElementById('jumpto');
+  jumpto.innerHTML=secs;
+  if(--secs>0){
+    setTimeout("countDown("+secs+",'"+surl+"')",1000);
+  }
+  else{
+    location.href=surl;
+  }
+}
+</script>
+
+<style type="text/css">
+.center { float: none; margin-left: auto; margin-right: auto; text-align: center; }
+</style>
+</head>
+<body>
+<div class="center">
+  <h1>404</h1>
+  <p>There isn't a Page here.</p>
+  <p>Jump to <a href="/">{{ site.title }}</a> after <span id="jumpto" style="font-weight: bold"> 5 </span> seconds,</p>
+  <script type="text/javascript">countDown(5,'/');</script>
+  <p>or click <a href="/" target="_parent"><span style="font-weight: bold">Here</span></a> to return.</p>
+</div>
+</body>
+</html>

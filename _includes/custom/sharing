@@ -1,0 +1,10 @@
+{% if site.safe and site.JB.sharing.provider == "baidu" and page.path contains '_posts' %}
+<div class="bdsharebuttonbox pull-right">
+  <a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a>
+  <a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a>
+  <a title="分享到网易微博" href="#" class="bds_t163" data-cmd="t163"></a>
+  <a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a>
+  <a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a>
+  <a href="#" class="bds_more" data-cmd="more"></a>
+</div>
+{% endif %}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{%else%}<meta name="keywords" content="{{ site.keywords }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+
+    <link href="{{ site.JB.cdn.bootstrap.css }}" rel="stylesheet" media="all">
+    <link href="{{ site.JB.cdn.font-awesome.css }}" rel="stylesheet" media="all">
+    <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="{{ ASSET_PATH }}/css/pygments.css" rel="stylesheet" media="all">
+    <link href="{{ site.JB.cdn.fancybox.css }}" rel="stylesheet" media="all">
+
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="canonical" href="{{ site.production_url }}{{ page.url | replace:'index.html','' }}">
+    <!-- fav and touch icons -->
+    <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    -->
+
+    <!-- atom & rss feed -->
+    <link href="{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="{{ site.title }} ATOM Feed">
+    <link href="{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="{{ site.title }} RSS Feed">
+
+  </head>
+
+  <body>
+    <!--[if lte IE 9]>
+    <div class="alert alert-warning">
+      <p>Your Internet Explorer is not supported. Please upgrade your Internet Explorer to version 9+, or use latest <a href="http://www.google.com/chrome/" target="_blank" class="alert-link">Google chrome</a>、<a href="http://www.mozilla.org/firefox/" target="_blank" class="alert-link">Mozilla Firefox</a>.</p>
+      <p>If you are using IE 9 or later, make sure you <a href="http://windows.microsoft.com/en-us/internet-explorer/use-compatibility-view#ie=ie-8" target="_blank" class="alert-link">turn off "Compatibility view"</a>.</p>
+    </div>
+    <![endif]-->
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{ HOME_PATH }}" title="{{ site.title }}">{{ site.title }}</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          {% assign pages_list = site.pages %}
+          {% assign group = 'navigation' %}
+          {% include JB/pages_list %}
+          <li>
+          <form id="search-form" class="form-inline visible-lg" role="form">
+            <input type="text" class="form-control input-sm" placeholder="Search" id="query">
+          </form>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right visible-lg visible-md">
+          <li><a href="{{ HOME_PATH }}rss.xml" target="_blank" title="RSS"><span class="fa fa-rss fa-lg"></span></a></li>
+          {% if site.author.github %}
+          <li><a href="https://github.com/{{ site.author.github }}" target="_blank" title="Github"><span class="fa fa-github fa-lg"></span></a></li>
+          {% endif %}
+          {% if site.author.googleplus %}
+          <li><a href="https://plus.google.com/{{ site.author.googleplus }}" target="_blank" title="Google+"><span class="fa fa-google-plus fa-lg"></span></a></li>
+          {% endif %}
+          {% if site.author.twitter %}
+          <li><a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" title="twitter"><span class="fa fa-twitter fa-lg"></span></a></li>
+          {% endif %}
+          {% if site.author.facebook %}
+          <li><a href="http://www.facebook.com/{{ site.author.facebook }}" target="_blank" title="facebook"><span class="fa fa-facebook fa-lg"></span></a></li>
+          {% endif %}
+          {% if site.author.weibo %}
+          <li><a href="http://weibo.com/{{ site.author.weibo }}" target="_blank" title="Weibo"><span class="fa fa-weibo fa-lg"></span></a></li>
+          {% endif %}
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div>
+    </nav>
+
+    <div class="container">
+      <div class="content">
+        {{ content }}
+      </div>
+
+      <footer class="text-left">
+      <p>&copy; {{ site.time | date: '%Y' }} <a href="{{ HOME_PATH }}" target="_blank">{{ site.author.name }}</a>. with Help from <a href="http://jekyllbootstrap.com/" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a> and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a></p>
+      </footer>
+    </div> <!-- /container -->
+
+    <script src="{{ site.JB.cdn.jquery.js }}"></script>
+    <script>window.jQuery || document.write('<script src="{{ ASSET_PATH }}/js/jquery.min.js"><\/script>')</script>
+    <script src="{{ site.JB.cdn.bootstrap.js }}"></script>
+    <script>window.jQuery || document.write('<script src="{{ ASSET_PATH }}/js/bootstrap.min.js"><\/script>')</script>
+    <script src="{{ site.JB.cdn.fancybox.js }}"></script>
+    <script>window.jQuery || document.write('<script src="{{ ASSET_PATH }}/js/jquery.fancybox.min.js"><\/script>')</script>
+    <script src="{{ site.JB.cdn.webfont.js }}"></script>
+    <script>window.jQuery || document.write('<script src="{{ ASSET_PATH }}/js/webfont.min.js"><\/script>')</script>
+    <script src="{{ ASSET_PATH }}/js/webcore.js"></script>
+
+    {% include JB/comments %}
+    {% include JB/analytics %}
+    {% include JB/sharing %}
+  </body>
+</html>

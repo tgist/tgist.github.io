@@ -1,0 +1,8 @@
+      <section>
+        <h4>Recently Posts</h4>
+        <ul>
+        {% for post in site.posts limit:10 %}
+          <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+        </ul>
+      </section>

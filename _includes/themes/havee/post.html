@@ -1,0 +1,69 @@
+<div class="row">
+
+  <article class="col-md-9 main-contenter">
+    <div id="search-loader" style="display:none;text-align:center">
+      <img src="/assets/themes/havee/images/loading.gif">
+    </div>
+    <div class="page-header">
+      <h2>
+        {{ page.title }}
+        {% if page.tagline %}
+        <small>{{ page.tagline }}</small>
+        {% endif %}
+      </h2>
+    </div>
+    {{ content }}
+    <hr>
+    <div class="row status">
+      <div class="col-md-6">
+        <div class="btn-group">
+          {% if page.previous %}
+          <a class="btn btn-primary btn-sm" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Prev</a>
+          {% else %}
+          <a class="btn btn-primary btn-sm disabled">&laquo; Prev</a>
+          {% endif %}
+          <a class="btn btn-primary btn-sm" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a>
+          {% if page.next %}
+          <a class="btn btn-primary btn-sm" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &raquo;</a>
+          {% else %}
+          <a class="btn btn-primary btn-sm disabled">Next &raquo;</a>
+          {% endif %}
+        </div>
+      </div>
+      <div class="col-md-6 visible-lg visible-md">
+      {% include custom/sharing %}
+      </div>
+    </div>
+    {% include custom/comments %}
+  </article>
+
+  <aside class="col-md-3 visible-lg visible-md">
+    <section>
+    <h4>Published</h4>
+    <ul>
+      <li>{{ page.date | date_to_long_string }}</li>
+    </ul>
+    </section>
+    {% if page.category %}
+    <section>
+    <h4>Categories</h4>
+    <ul>
+      {% assign categories_list = page.category %}
+      {% include JB/categories_list %}
+    </ul>
+    </section>
+    {% endif %}
+    {% unless page.tags == empty %}
+    <section>
+    <h4>Tags</h4>
+    <ul class="tag_box">
+      {% assign tags_list = page.tags %}
+      {% include JB/tags_list %}
+    </ul>
+    </section>
+    {% endunless %}
+
+    {% include custom/asides/license %}
+  </aside>
+
+</div>

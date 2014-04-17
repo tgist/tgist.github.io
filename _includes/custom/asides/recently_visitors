@@ -1,0 +1,6 @@
+      {% if site.JB.comments.provider == "duoshuo" and page.comments != false %}
+      <section>
+        <h4>Recently Visitors</h4>
+          <ul class="ds-recent-visitors" data-num-items="{{ site.JB.comments.duoshuo.rvisitors.num }}" data-avatar-size="{{ site.JB.comments.duoshuo.rvisitors.size }}"></ul>
+      </section>
+      {% endif %}

@@ -1,0 +1,118 @@
+# 链接样式，参考 http://jekyllrb.com/docs/permalinks
+permalink: /:categories/:year-:month/:title.html
+
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+pygments: true
+paginate: 5
+
+markdown: redcarpet             # markdown 语法解释引擎
+redcarpet:
+    extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough"]
+# 参考 http://github.com/vmg/redcarpet/blob/master/README.markdown
+
+# 核心设置
+title : Havee's Space
+tagline: Site Tagline
+keywords : linux, gentoo, internet, sql, jekyll, BSD, MAC, havee
+description: Havee Hobbies, Linux Tips Record。
+author :
+  name : Havee
+  email :
+  github : Ihavee
+  gitcafe : Havee
+  twitter :
+  facebook :
+  feedburner :
+  weibo : Havanna
+
+# 域名连接
+#production_url : //ihavee.github.io
+
+# Jekyll Bootstrap
+JB :
+  version : 0.3.0
+
+  BASE_PATH : false                 # 如果不懂参数，请不要更改
+  ASSET_PATH : false                # 同上
+
+  # page
+  archive_path: /archive.html
+  categories_path : /categories.html
+  tags_path : /tags.html
+  atom_path : /atom.xml
+  rss_path : /rss.xml
+
+  # 评论，provider 留空或 false 关闭评论
+  comments :
+    provider :                      # 采用那种评论，duoshuo 或 disqus ....
+    disqus :
+      short_name :
+    livefyre :
+      site_id :
+    intensedebate :
+      account :
+    facebook :
+      appid :
+      num_posts:
+      width: 580
+      colorscheme: light
+    duoshuo :
+      name : havanna
+      rcomments :                   # 首页侧边栏最新评论
+        num: 10                     # 最新评论显示条数
+        avatar : 0                  # 最新评论是否显示头像
+        time: 0
+        title : 0
+        admin : 0
+        length : 12                 # 最新评论显示的长度
+      rvisitors :                   # 首页侧边栏最新访客
+        num : 12                    # 最新访客数目
+        size : 45                   # 最新访客头像的尺寸
+
+  # 网站统计
+  analytics :
+    provider :                      # 采用那种统计，baidu 或 google ...
+    google :
+        tracking_id : 'UA-123-12'
+    getclicky :
+        site_id :
+    mixpanel :
+        token : '_MIXPANEL_TOKEN_'
+    piwik :
+        baseURL : 'myserver.tld/piwik' # Piwik installation address (without protocol)
+        idsite : '1'                   # the id of the site on Piwik
+    baidu :
+        siteid: 707xxxxxxxxxxxxxxxxxxxxx        # 百度统计 js 代码后的字符串
+
+  # 一键分享
+  sharing :
+    provider : baidu
+
+  # CDN 加速资源
+  cdn :
+    jquery :
+      js : //cdn.bootcss.com/jquery/2.1.0/jquery.min.js
+    webfont :
+      js : //cdn.bootcss.com/webfont/1.3.0/webfont.min.js
+    font-awesome :
+      css : //cdn.bootcss.com/font-awesome/4.0.3/css/font-awesome.min.css
+    bootstrap :
+      js : //cdn.bootcss.com/twitter-bootstrap/3.1.1/js/bootstrap.min.js
+      css : //cdn.bootcss.com/twitter-bootstrap/3.1.1/css/bootstrap.min.css
+    fancybox :
+      js : //cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js
+      css : //cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css
+
+  # 友情链接
+  blogroll : false                   # true 开启，留空或 false 关闭
+  brlist :
+    - text : JoveSky
+      url : //www.jovesky.com/
+    - text : 巨二·博客
+      url : //www.juerblog.com/
+    - text : 刘静的博客
+      url : //upliu.net/
+    - text : 小天地，大世界
+      url : //www.lyblog.net/
+    - text : 清风的网络空间
+      url : //phpcj.org/

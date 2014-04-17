@@ -1,0 +1,19 @@
+        <div class="row">
+
+          <article class="col-md-9 main-contenter">
+            <div id="search-loader" style="display:none;text-align:center">
+              <img src="/assets/themes/havee/images/loading.gif">
+            </div>
+            <div class="page-header-wrapper">
+              <div class="page-header">
+                <h2>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h2>
+              </div>
+            </div>
+            {{ content }}
+          </article>
+
+          <aside class="col-md-3 visible-lg visible-md">
+            {% include custom/aside %}
+          </aside>
+
+        </div>

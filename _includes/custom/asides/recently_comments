@@ -1,0 +1,6 @@
+      {% if site.JB.comments.provider == "duoshuo" and page.comments != false %}
+      <section>
+        <h4>Recently Comments</h4>
+          <ul class="ds-recent-comments" data-num-items="{{ site.JB.comments.duoshuo.rcomments.num }}" data-show-avatars="{{ site.JB.comments.duoshuo.rcomments.avatar }}" data-show-time="{{ site.JB.comments.duoshuo.rcomments.time }}" data-show-title="{{ site.JB.comments.duoshuo.rcomments.title }}" data-show-admin="{{ site.JB.comments.duoshuo.rcomments.admin }}" data-excerpt-length="{{ site.JB.comments.duoshuo.rcomments.length }}"></ul>
+      </section>
+      {% endif %}
