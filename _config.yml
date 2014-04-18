@@ -44,7 +44,7 @@ JB :
 
   # 评论，provider 留空或 false 关闭评论
   comments :
-    provider : duoshuo              # 采用那种评论，duoshuo 或 disqus ....
+    provider :                      # 采用那种评论，可填 duoshuo 或 disqus 或其他 ...
     disqus :
       short_name :
     livefyre :
@@ -71,7 +71,7 @@ JB :
 
   # 网站统计
   analytics :
-    provider : baidu                # 采用那种统计，baidu 或 google ...
+    provider :                      # 采用那种统计，可填 baidu 或 google 或其他 ...
     google :
         tracking_id : 'UA-123-12'
     getclicky :
