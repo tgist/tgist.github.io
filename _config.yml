@@ -44,7 +44,7 @@ JB :
 
   # 评论，provider 留空或 false 关闭评论
   comments :
-    provider :                      # 采用那种评论，duoshuo 或 disqus ....
+    provider : duoshuo              # 采用那种评论，duoshuo 或 disqus ....
     disqus :
       short_name :
     livefyre :
@@ -57,7 +57,7 @@ JB :
       width: 580
       colorscheme: light
     duoshuo :
-      name : havanna
+      name : shortname              # 多说上获取的 shortname
       rcomments :                   # 首页侧边栏最新评论
         num: 10                     # 最新评论显示条数
         avatar : 0                  # 最新评论是否显示头像
@@ -71,7 +71,7 @@ JB :
 
   # 网站统计
   analytics :
-    provider :                      # 采用那种统计，baidu 或 google ...
+    provider : baidu                # 采用那种统计，baidu 或 google ...
     google :
         tracking_id : 'UA-123-12'
     getclicky :
@@ -106,13 +106,5 @@ JB :
   # 友情链接
   blogroll : false                   # true 开启，留空或 false 关闭
   brlist :
-    - text : JoveSky
-      url : //www.jovesky.com/
-    - text : 巨二·博客
-      url : //www.juerblog.com/
-    - text : 刘静的博客
-      url : //upliu.net/
-    - text : 小天地，大世界
-      url : //www.lyblog.net/
-    - text : 清风的网络空间
-      url : //phpcj.org/
+    - text : Havee's Space
+      url : //havee.cme/
