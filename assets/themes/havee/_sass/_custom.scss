@@ -49,6 +49,9 @@ body > nav.navbar-default {
   position: relative;
   display: block;
   padding: 10px 15px;
+  input {
+    @include background-color(255, 0.5);
+  }
 }
 
 .container > .navbar-header, .container > .navbar-collapse {
