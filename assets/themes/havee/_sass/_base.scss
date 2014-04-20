@@ -1,15 +1,15 @@
 /* This is for your Custom Content. */
 
 @mixin sans-serif {
-  font-family: "Helvetica Neue", 'Ubuntu', Tahoma, Arial, Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Tahoma, Arial, Helvetica, sans-serif;
 }
 
 @mixin serif {
-  font-family: 'Cambo', serif;
+  font-family: serif;
 }
 
 @mixin monospace {
-  font-family: "PT Mono", "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  font-family: "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
 }
 
 @mixin transition($a: 0.3s) {
