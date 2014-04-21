@@ -92,7 +92,8 @@ JB :
   cdn :
     jquery :
       js : //cdn.bootcss.com/jquery/2.1.0/jquery.min.js
-    webfont :
+    webfont : true                  # google-fonts 开关，false 为关，留空或 true 为打开
+    google-fonts :
       js : //cdn.bootcss.com/webfont/1.3.0/webfont.min.js
     font-awesome :
       css : //cdn.bootcss.com/font-awesome/4.0.3/css/font-awesome.min.css
