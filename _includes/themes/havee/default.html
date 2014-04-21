@@ -103,11 +103,19 @@
     <script>window.jQuery || document.write('<script src="{{ ASSET_PATH }}/js/bootstrap.min.js"><\/script>')</script>
     <script src="{{ site.JB.cdn.fancybox.js }}"></script>
     <script>window.jQuery || document.write('<script src="{{ ASSET_PATH }}/js/jquery.fancybox.min.js"><\/script>')</script>
+    <script src="{{ ASSET_PATH }}/js/webcore.js"></script>
     {% if site.JB.cdn.webfont != false %}
     <script src="{{ site.JB.cdn.google-fonts.js }}"></script>
     <script>window.jQuery || document.write('<script src="{{ ASSET_PATH }}/js/webfont.min.js"><\/script>')</script>
+    <script type="text/javascript">
+    WebFont.load ({
+        google: {
+            families: ['Ubuntu:400,400italic::latin', 'Cambo::latin', 'PT+Mono::latin']
+        },
+        timeout: 2000 // set the timeout to n secends
+    });
+    </script>
     {% endif %}
-    <script src="{{ ASSET_PATH }}/js/webcore.js"></script>
 
     {% include JB/comments %}
     {% include JB/analytics %}
