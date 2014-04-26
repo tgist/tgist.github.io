@@ -162,6 +162,20 @@ article {
       @include monospace;
     }
   }
+  .cc {
+    padding:10px 0px;
+    hr {
+      width: 100%;
+      @include border(0.35);
+    }
+    img {
+      position: absolute;
+      left: 50%;
+      margin-top: -38px;
+      margin-left: -44px;
+      @include box-shadow(0px, 0px, 4px, 0.8);
+    }
+  }
 }
 
 section {
