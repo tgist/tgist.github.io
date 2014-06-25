@@ -4,7 +4,7 @@
     /* fancybox */
     $(document).ready(function() {
         $("p img").each(function() {
-            var strA = "<div style='max-width: 90%; margin: 0 auto;'><a id='fancyBox' href='" + this.src + "'></a></div>";
+            var strA = "<div style='margin: 0 auto; text-align: center;'><a id='fancyBox' href='" + this.src + "'></a></div>";
             $(this).wrapAll(strA);
         });
     });
