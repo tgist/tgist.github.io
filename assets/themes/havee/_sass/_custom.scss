@@ -1,7 +1,7 @@
 /* This is for your Custom Content. */
 
 body {
-  color: rgba(51, 51, 51, 0.9);
+  color: rgba(51, 51, 51, .9);
   background: url("../images/bg.png") repeat scroll left top transparent;
   @include sans-serif;
 }
@@ -22,7 +22,7 @@ h5, h6, strong {
 
 a {
   @include transition;
-  color: rgba(0, 136, 204, 0.9);
+  color: rgba(0, 136, 204, .9);
   &:hover, &:focus {
     color: rgb(0, 85, 128);
     text-decoration: none;
@@ -32,7 +32,7 @@ a {
 
 .navbar .brand, .navbar .nav > li > a {
   @include transition;
-  @include text-shadow(255, 0px, 170);
+  @include text-shadow(255, 0, 170);
   &:hover, &:focus {
     color: rgb(51, 51, 51);
     @include text-shadow(255, 1px, 170);
@@ -41,8 +41,8 @@ a {
 }
 
 body > nav.navbar-default {
-  @include background-color(249, 0.8);
-  @include box-shadow(0px, 0px, 4px, 0.6);
+  @include background-color(249, .8);
+  @include box-shadow(0, 0, 12px, .8);
 }
 
 .nav > li > form {
@@ -50,15 +50,15 @@ body > nav.navbar-default {
   display: block;
   padding: 10px 15px;
   input {
-    @include background-color(255, 0.5);
+    @include background-color(255, .5);
   }
 }
 
 .container > .navbar-header, .container > .navbar-collapse {
   @include text-shadow(255, 2px, 170);
   @include transition;
-  margin-right: 0px;
-  margin-left: 0px;
+  margin-right: 0;
+  margin-left: 0;
   @include serif;
   font-weight: 500;
 }
@@ -72,36 +72,12 @@ body > nav.navbar-default {
 }
 
 .page-header {
-  border-bottom: 1px dashed rgba(50, 118, 177, 0.067);
-  .bottom {
-    padding: 4px 0 0;
-    vertical-align: middle;
-	color: rgba(169, 169, 169, 1);
-    p {
-      display: inline;
-      margin: 0 4px;
-    }
-    a {
-      color: rgba(169, 169, 169, 1);
-      &:hover, &:focus {
-        color: rgb(51, 51, 51);
-      }
-      p {
-        display: inline;
-        margin: 0 4px;
-      }
-      span {
-        margin-left: 2px;
-        vertical-align: super;
-        font-size: 0.8em;
-      }
-    }
-  }
+  border-bottom: 1px dashed rgba(50, 118, 177, .067);
 }
 
 .tag_box a span {
   vertical-align: super;
-  font-size: 0.8em;
+  font-size: .8em;
 }
 
 .tag_box a {
@@ -109,7 +85,7 @@ body > nav.navbar-default {
   margin: 2px;
   line-height: 180%;
   border-radius: 3px;
-  @include background-color(238, 0.9);
+  @include background-color(238, .9);
 }
 
 .row .visible-lg {
@@ -119,19 +95,18 @@ body > nav.navbar-default {
 article {
   .wrapper {
     @include transition;
-    @include border(0.167);
-    @include border-radius(10px);
-    @include box-shadow(0px, 0px, 4px, 0.267);
+    @include border(.167);
+    @include box-shadow(0, 0, 6px, .567);
     padding:10px;
-    margin: 10px 0px;
+    margin: 10px 0;
     .entry-title {
-      border-bottom: 1px dashed rgba(50, 118, 177, 0.067);
+      border-bottom: 1px dashed rgba(50, 118, 177, .067);
     }
     p img {
       @include img;
     }
     .status {
-      border-top: 1px dashed rgba(50, 118, 177, 0.067);
+      border-top: 1px dashed rgba(50, 118, 177, .067);
       padding-top: 10px;
       color: rgba(169, 169, 169, 1);
       .meta {
@@ -153,18 +128,18 @@ article {
           span {
             margin-left: 2px;
             vertical-align: super;
-            font-size: 0.8em;
+            font-size: .8em;
           }
         }
       }
       .visible-lg {
-        margin-top: 0px;
+        margin-top: 0;
       }
     }
   }
   .status {
     .visible-lg {
-      margin-top: 0px;
+      margin-top: 0;
     }
   }
   p, ol, ul, table {
@@ -173,42 +148,31 @@ article {
     }
     code {
       @include monospace;
-      @include box-shadow(0px, 0px, 1px, 0.167);
-      @include border(0.067);
+      @include box-shadow(0, 0, 1px, .167);
+      @include border(.067);
     }
   }
   .highlight pre {
     @include transition;
-    @include background-color(249, 0.3);
-    @include border(0.35);
-    @include box-shadow(0px, 0px, 3px, 0.267);
+    @include background-color(249, .9);
+    @include border(.35);
+    @include box-shadow(0, 0, 3px, .267);
     code {
       @include monospace;
-    }
-  }
-  .cc {
-    padding:0px 0px 10px 0px;
-    img {
-      position: absolute;
-      left: 50%;
-      margin-top: -25px;
-      margin-left: -44px;
-      @include box-shadow(0px, 0px, 4px, 0.8);
     }
   }
 }
 
 section {
   @include transition;
-  @include border(0.167);
-  @include border-radius(5px);
-  @include box-shadow(0px, 0px, 4px, 0.267);
+  @include border(.167);
+  @include box-shadow(0, 0, 4px, .467);
   @include background-color;
-  padding: 0px 5px;
-  margin: 5px 0px;
+  padding: 0 5px;
+  margin: 5px 0;
   h4 {
     @include serif;
-    border-bottom: 1px dashed rgba(50, 118, 177, 0.067);
+    border-bottom: 1px dashed rgba(50, 118, 177, .067);
   }
 }
 
@@ -224,40 +188,40 @@ table {
   max-width: 100%;
   border-collapse: collapse;
   @include transition;
-  @include border(0.167);
+  @include border(.167);
   &:hover {
     @include transition;
-    @include border(0.35);
-    @include box-shadow(0px, 0px, 3px, 0.267);
+    @include border(.35);
+    @include box-shadow(0, 0, 3, .267);
   }
   thead tr th {
-    @include border(0.167);
-    border-top: 0px none;
+    @include border(.167);
+    border-top: 0 none;
     border-bottom-width: 2px;
     vertical-align: bottom;
     padding: 8px;
   }
   tbody tr td {
-    @include border(0.167);
+    @include border(.167);
     vertical-align: middle;
     padding: 8px;
   }
   thead > tr {
-    @include background-color(249, 0.9);
+    @include background-color(249, .9);
   }
   tbody > tr:nth-child(2n+1) {
     @include background-color;
   }
   tbody tr {
     &:hover {
-      @include background-color(235, 0.7);
+      @include background-color(235, .7);
       @include transition;
     }
   }
 }
 
 footer {
-  margin: 20px 0px;
+  margin: 20px 0;
   p {
     line-height: 100%;
     color: rgb(119, 119, 119);

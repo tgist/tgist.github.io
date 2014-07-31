@@ -1,6 +1,6 @@
 <div class="row">
 
-  <article class="col-md-12 main-contenter">
+  <article class="col-md-9 main-contenter">
     <div id="search-loader" style="display:none;text-align:center">
       <img src="/assets/themes/havee/images/loading.gif">
     </div>
@@ -11,18 +11,9 @@
         <small>{{ page.tagline }}</small>
         {% endif %}
       </h2>
-	  <div class="bottom">
-		<span class="glyphicon glyphicon-user"></span><p>{{ site.author.name }}</p>
-	    <span class="glyphicon glyphicon-calendar"></span><p>{{ page.date | date_to_string }}</p>
-		<span class="glyphicon glyphicon-folder-open"></span> {% if page.categories %}{% for category in page.categories %}<a href="/categories.html#{{ category }}-ref" title="{{ category }}"><p>{{ category }}</p></a>{% endfor %}{% endif %}
-		<span class="glyphicon glyphicon-tags"></span> {% if page.tags %}{% for tag in page.tags %}<a href="/tags.html#{{ tag }}-ref" title="{{ tag }}"><p>{{ tag }}</p></a>{% endfor %}{% endif %}
-      </div>
     </div>
-    <div class="wrapper">{{ content }}</div>
-    <div class="cc">
-      <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">
-        <img title="署名-非商业性使用-相同方式共享 4.0 国际" src="/assets/images/CC.png" alt="License"></img>
-      </a>
+    <div class="wrapper">
+      {{ content }}
     </div>
     <div class="row status">
       <div class="col-md-6">
@@ -46,5 +37,34 @@
     </div>
     {% include custom/comments %}
   </article>
+
+  <aside class="col-md-3 visible-lg visible-md">
+    <section>
+    <h4>Published</h4>
+    <ul>
+      <li>{{ page.date | date_to_long_string }}</li>
+    </ul>
+    </section>
+    {% if page.category %}
+    <section>
+    <h4>Categories</h4>
+    <ul>
+      {% assign categories_list = page.category %}
+      {% include JB/categories_list %}
+    </ul>
+    </section>
+    {% endif %}
+    {% unless page.tags == empty %}
+    <section>
+    <h4>Tags</h4>
+    <ul class="tag_box">
+      {% assign tags_list = page.tags %}
+      {% include JB/tags_list %}
+    </ul>
+    </section>
+    {% endunless %}
+
+    {% include custom/asides/license %}
+  </aside>
 
 </div>
