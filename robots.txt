@@ -1,3 +1,0 @@
-User-agent: *
-Disallow: /page*
-Sitemap: http://havee.me/sitemap.xml
