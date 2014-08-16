@@ -1,0 +1,185 @@
+body {
+    font-size: 16px;
+    color: rgba(51, 51, 51, .9);
+    background-color: rgba(204, 204, 204, .3);
+    @include sans-serif;
+}
+
+:hover, :focus {
+    @include transition;
+}
+
+a {
+    &:hover, &:focus {
+        text-decoration: none;
+    }
+}
+
+h1 {
+    font-size: 34px;
+    color: rgba(255, 051, 051, .8);
+    &:hover, &:focus {
+        color: rgba(153, 051, 051, .8);
+    }
+}
+
+h2 {
+    font-size: 30px;
+    color: rgba(255, 000, 255, .8);
+    border-bottom: 2px solid rgba(255, 000, 255, .375);
+    &:hover, &:focus {
+        color: rgba(153, 000, 153, .8);
+    }
+}
+
+h3 {
+    font-size: 26px;
+    color: rgba(000, 153, 051, .8);
+    max-width: 50%;
+    border-bottom: 2px dashed rgba(000, 153, 051, .375);
+    &:hover, &:focus {
+        color: rgba(000, 102, 051, .8);
+    }
+}
+
+h4 {
+    font-size: 22px;
+    color: rgba(153, 000, 000, .8);
+    max-width: 25%;
+    border-bottom: 2px dashed rgba(153, 000, 000, .375);
+    &:hover, &:focus {
+        color: rgba(102, 000, 000, .8);
+    }
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+    line-height: 150%;
+    @include text-shadow;
+}
+
+h5, h6 {
+    font-size: 18px;
+    color: rgba(000, 000, 000, .9);
+}
+
+.header {
+    padding: 10px 10px 0 10px;
+    .title {
+        font-size: 36px;
+        display: inline;
+        @include text-shadow;
+        a {
+            color: rgba(000, 153, 153, .8);
+            &:hover, &:focus {
+                color: rgba(000, 102, 102, .8);
+            }
+        }
+    }
+    ul {
+        li > a {
+            color: rgba(000, 153, 153, .8);
+            @include text-shadow;
+            &:hover, &:focus {
+                color: rgba(000, 102, 102, .8);
+                background: transparent;
+            }
+        }
+    }
+}
+
+.wrapper {
+    border: 1px solid rgba(0, 0, 0, .17);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .37);
+    background: rgba(253, 253, 253, .9);
+    padding: 15px;
+    margin: 15px 0;
+    .small {
+        color: rgba(119, 119, 119, .8);
+    }
+    p, ol, ul, table {
+        img {
+            @include img;
+        }
+        code {
+            background-color: rgba(255, 204, 204, .3);
+            box-shadow: 0 0 1px rgba(0, 0, 0, .167);
+            border: 1px solid rgba(102, 102, 102, .167);
+            @include monospace;
+        }
+    }
+    .highlight pre {
+        background-color: rgba(255, 204, 204, .3);
+        box-shadow: 0 0 3px rgba(0, 0, 0, .267);
+        border: 1px solid rgba(102, 102, 102, .35);
+        code {
+            @include monospace;
+        }
+    }
+    hr {
+        border-color: rgba(102, 102, 102, .8);
+    }
+    .tag-box {
+        display: table;
+        list-style: none outside none;
+        li {
+            line-height: 200%;
+            display: inline-block;
+            a {
+                padding: 2px 4px;
+                background-color: rgba(255,204,204,.3);
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
+table {
+    margin-bottom: 20px;
+    max-width: 100%;
+    border-collapse: collapse;
+    border: 1px solid rgba(50, 118, 177, .167);
+    @include transition;
+    &:hover {
+        border: 1px solid rgba(50, 118, 177, .35);
+        box-shadow: 0 0 3 rgba(50, 118, 177, .267);
+        @include transition;
+    }
+    thead tr th {
+        border: 1px solid rgba(50, 118, 177, .167);
+        border-top: 0 none;
+        border-bottom-width: 2px;
+        vertical-align: bottom;
+        padding: 8px;
+    }
+    tbody tr td {
+        border: 1px solid rgba(50, 118, 177, .167);
+        vertical-align: middle;
+        padding: 8px;
+    }
+    thead > tr {
+        background-color: rgba(249, 249, 249, .9);
+    }
+    tbody > tr:nth-child(2n+1) {
+        background-color: rgba(249, 249, 249, .5);
+    }
+    tbody tr {
+        &:hover {
+            background-color: rgba(235, 235, 235, .7);
+            @include transition;
+        }
+    }
+}
+
+.footer {
+    padding: 0 15px;
+    p {
+        line-height: 150%;
+        color: rgba(119, 119, 119, .8);
+        a {
+            color: rgba(119, 119, 119, .8);
+            &:hover, &:focus {
+                color: rgb(51, 51, 51)
+            }
+        }
+    }
+}

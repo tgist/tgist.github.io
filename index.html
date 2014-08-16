@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<div class="raw">
+  <div class="col-md-9">
+  <h3>文章列表</h3>
+    <ul>
+      {% for post in site.posts %}
+      <li>
+        <span>{{ post.date | date: "%Y-%m-%d" }}：</span>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="col-md-3">
+    {% include recently_comments.html %}
+    {% include blogroll.html %}
+  </div>
+  <div class="clearfix"></div>
+</div>

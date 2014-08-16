@@ -1,0 +1,44 @@
+# Site settings
+title: "Jekyll Demo"
+description: "Jekyll Demo"
+baseurl: ""
+url: "//ihavee.github.io"
+highlighter: pygments
+paginate: 20
+author:
+    name: Havee
+    github: Ihavee
+    email:
+    gitcafe: Havee
+    twitter:
+    facebook:
+    googleplus:
+    weibo: Havanna
+qiniudn: //havee.qiniudn.com
+atom_path: /atom.xml
+rss_path: /rss.xml
+
+# Build settings
+markdown: redcarpet
+redcarpet:
+    extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough"]
+permalink: /:categories/:year-:month/:title.html
+
+# comment
+comments:
+    provider:
+    duoshuo:
+        name: havanna
+        rcomments:
+            num: 10
+            avatar: 0
+            time: 0
+            title: 0
+            admin: 0
+            length: 12
+
+# blogroll
+blogroll: true
+brlist:
+    - text: "Havee's Space"
+      url : //havee.me/
