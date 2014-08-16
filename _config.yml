@@ -1,10 +1,11 @@
 # Site settings
-title: "Jekyll Demo"
-description: "Jekyll Demo"
+title: "Jekyll template demo"
+description: "jekyll template demo."
+keywords: "jekyll, template, demo"
 baseurl: ""
 url: "//ihavee.github.io"
 highlighter: pygments
-paginate: 20
+paginate: 5
 author:
     name: Havee
     github: Ihavee
@@ -14,7 +15,7 @@ author:
     facebook:
     googleplus:
     weibo: Havanna
-qiniudn: //havee.qiniudn.com
+qiniudn: //havee.qiniudn.com                # //{bucket}.qiniudn.com
 atom_path: /atom.xml
 rss_path: /rss.xml
 
@@ -26,16 +27,19 @@ permalink: /:categories/:year-:month/:title.html
 
 # comment
 comments:
-    provider:
     duoshuo:
-        name: havanna
+        name:                               # short name
         rcomments:
             num: 10
             avatar: 0
             time: 0
             title: 0
             admin: 0
-            length: 12
+            length: 26
+# 网站统计
+analytics:
+    baidu:
+        siteid:                             # 百度统计 js 代码后的字符串
 
 # blogroll
 blogroll: true

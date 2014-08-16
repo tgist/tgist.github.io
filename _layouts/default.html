@@ -8,26 +8,36 @@
       {% include header.html %}
 
       <article class="wrapper">
+      <div class="raw">
+        <div id="search-loader" style="display:none;text-align:center">
+          <img src="/style/img/loading.gif">
+        </div>
         {{ content }}
+      </div>
       </article>
 
-        {% include footer.html %}
-      </div>
+      {% include footer.html %}
+    </div>
 
-      {% if site.comments.provider == "duoshuo" %}
-      <!-- duoshuo Begin -->
-      <script type="text/javascript">
-        var duoshuoQuery = {short_name:"{{ site.comments.duoshuo.name }}"};
-        (function() {
-          var ds = document.createElement('script');
+    <script src="{{ ASSET_PATH }}/style/js/jquery.min.js"></script>
+    <script src="{{ ASSET_PATH }}/style/js/bootstrap.min.js"></script>
+    <script src="{{ ASSET_PATH }}/style/js/webcore.js"></script>
+
+    {% include baidu-analytics.html %}
+    {% if site.comments.duoshuo.name %}
+    <!-- duoshuo Begin -->
+    <script type="text/javascript">
+      var duoshuoQuery = {short_name:"{{ site.comments.duoshuo.name }}"};
+      (function() {
+        var ds = document.createElement('script');
           ds.type = 'text/javascript';ds.async = true;
           ds.src = 'http://static.duoshuo.com/embed.js';
           ds.charset = 'UTF-8';
           (document.getElementsByTagName('head')[0] ||
           document.getElementsByTagName('body')[0]).appendChild(ds);
-        })();
-      </script>
-      <!-- duoshuo End -->
-      {% endif %}
+      })();
+    </script>
+    <!-- duoshuo End -->
+    {% endif %}
   </body>
 </html>

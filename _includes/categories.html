@@ -1,0 +1,12 @@
+{% capture site_categories %}{% for category in site.categories %}{{ category | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign category_words = site_categories | split:',' | sort %}
+
+<section>
+  <h2>Categories</h2>
+  <ul>
+    {% for item in (0..site.categories.size) %}{% unless forloop.last %}
+    {% capture this_word %}{{ category_words[item] | strip_newlines }}{% endcapture %}
+    <li><a href="/categories.html#{{ this_word | cgi_escape }}">{{ this_word }}</a></li>
+    {% endunless %}{% endfor %}
+  </ul>
+</section>
