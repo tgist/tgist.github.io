@@ -6,4 +6,4 @@
 
 #### create new page
 
-	rake page title='A Title'
+	rake page name='about.html'
