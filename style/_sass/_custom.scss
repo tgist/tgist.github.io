@@ -44,7 +44,7 @@ h3 {
 }
 
 h4 {
-  font-size: 22px;
+  font-size: 24px;
   color: rgba(153, 000, 000, .8);
   border-bottom: 2px dashed rgba(153, 000, 000, .375);
   &:hover, &:focus {
@@ -57,9 +57,17 @@ h1, h2, h3, h4, h5, h6, strong {
   @include text-shadow;
 }
 
-h5, h6 {
-  font-size: 18px;
-  color: rgba(000, 000, 000, .9);
+h5 {
+  font-size: 20px;
+  color: rgba(102, 102, 051, .8);
+  &:hover, &:focus {
+    color: rgba(051, 051, 000, .8)
+  }
+}
+
+h6 {
+  font-size: 16px;
+  color: rgba(000, 000, 000, .8);
 }
 
 .header {
