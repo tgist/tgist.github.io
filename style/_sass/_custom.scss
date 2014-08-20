@@ -1,6 +1,6 @@
 body {
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.8;
   color: rgba(51, 51, 51, .9);
   background-color: rgba(204, 204, 204, .3);
   @include sans-serif;
@@ -53,7 +53,7 @@ h4 {
 }
 
 h1, h2, h3, h4, h5, h6, strong {
-  line-height: 150%;
+  line-height: 1.8;
   @include text-shadow;
 }
 
@@ -84,17 +84,19 @@ h6 {
     }
   }
   ul {
-    li > a {
-      color: rgba(000, 153, 153, .8);
-      @include text-shadow;
-      &:hover, &:focus {
-        color: rgba(000, 102, 102, .8);
-        background: transparent;
+    li {
+      margin: 4px 0;
+      a {
+        color: rgba(000, 153, 153, .8);
+        @include text-shadow;
+        &:hover, &:focus {
+          color: rgba(000, 102, 102, .8);
+          background: transparent;
+        }
       }
-    }
-    li > form {
-      position: relative;
-      padding: 15px;
+      form {
+        margin-top: 15px;
+      }
     }
   }
 }
@@ -113,6 +115,9 @@ h6 {
     color: rgba(119, 119, 119, .8);
   }
   p, ol, ul, table {
+    li {
+      margin: 5px 0;
+    }
     img {
       @include img;
     }
@@ -127,6 +132,8 @@ h6 {
     background-color: rgba(255, 204, 204, .3);
     box-shadow: 0 0 3px rgba(0, 0, 0, .267);
     border: 1px solid rgba(102, 102, 102, .35);
+    max-width: 95%;
+    margin: 10px auto;
     code {
       @include monospace;
     }
@@ -138,7 +145,7 @@ h6 {
     display: table;
     list-style: none outside none;
     li {
-      line-height: 200%;
+      line-height: 1.8;
       display: inline-block;
       margin: 0 3px;
       a {
@@ -199,7 +206,6 @@ table {
 .footer {
   padding: 0 15px;
   p {
-    line-height: 150%;
     color: rgba(119, 119, 119, .8);
     a {
       color: rgba(119, 119, 119, .8);
