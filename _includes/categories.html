@@ -6,7 +6,7 @@
   <ul>
     {% for item in (0..site.categories.size) %}{% unless forloop.last %}
     {% capture this_word %}{{ category_words[item] | strip_newlines }}{% endcapture %}
-    <li><a href="/categories.html#{{ this_word | cgi_escape }}">{{ this_word }}</a></li>
+    <li><a href="/categories.html#{{ this_word | cgi_escape }}" rel="nofollow">{{ this_word }}</a></li>
     {% endunless %}{% endfor %}
   </ul>
 </section>
