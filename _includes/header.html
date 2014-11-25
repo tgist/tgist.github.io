@@ -13,25 +13,25 @@
     </form>
     </li>
     <li><a href="{{ '/archive.html' }}" title="Archive"><span class='fa fa-archive fa-2x'></span></a></li>
-    <li><a href="{{ '/categories.html' }}" title="Categories"><span class='fa fa-navicon fa-2x'></span></a></li>
-    <li><a href="{{ '/tags.html' }}" title="Tags"><span class='fa fa-tags fa-2x'></span></a></li>
+    <li><a href="{{ '/categories.html' }}" title="Categories" rel="nofollow"><span class='fa fa-navicon fa-2x'></span></a></li>
+    <li><a href="{{ '/tags.html' }}" title="Tags" rel="nofollow"><span class='fa fa-tags fa-2x'></span></a></li>
     <li><a href="{{ '/about.html' }}" title="About"><span class='fa fa-user fa-2x'></span></a></li>
     {% if site.author.github %}
-    <li><a href="https://github.com/{{ site.author.github }}" target="_blank" title="Github"><span class='fa fa-github fa-2x'></span></a></li>
+    <li><a href="https://github.com/{{ site.author.github }}" target="_blank" title="Github" rel="nofollow"><span class='fa fa-github fa-2x'></span></a></li>
     {% endif %}
     {% if site.author.googleplus %}
-    <li><a href="https://plus.google.com/{{ site.author.googleplus }}" target="_blank" title="Google+"><span class="fa fa-google-plus fa-2x"></span></a></li>
+    <li><a href="https://plus.google.com/{{ site.author.googleplus }}" target="_blank" title="Google+" rel="nofollow"><span class="fa fa-google-plus fa-2x"></span></a></li>
     {% endif %}
     {% if site.author.twitter %}
-    <li><a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" title="twitter"><span class="fa fa-twitter fa-2x"></span></a></li>
+    <li><a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" title="twitter" rel="nofollow"><span class="fa fa-twitter fa-2x"></span></a></li>
     {% endif %}
     {% if site.author.facebook %}
-    <li><a href="http://www.facebook.com/{{ site.author.facebook }}" target="_blank" title="facebook"><span class="fa fa-facebook fa-2x"></span></a></li>
+    <li><a href="http://www.facebook.com/{{ site.author.facebook }}" target="_blank" title="facebook" rel="nofollow"><span class="fa fa-facebook fa-2x"></span></a></li>
     {% endif %}
     {% if site.author.weibo %}
-    <li><a href="http://weibo.com/{{ site.author.weibo }}" target="_blank" title="Weibo"><span class="fa fa-weibo fa-2x"></span></a></li>
+    <li><a href="http://weibo.com/{{ site.author.weibo }}" target="_blank" title="Weibo" rel="nofollow"><span class="fa fa-weibo fa-2x"></span></a></li>
     {% endif %}
 
-    <li><a href="{{ '/rss.xml' }}" target="_blank" title="RSS"><span class='fa fa-rss fa-2x'></span></a></li>
+    <li><a href="{{ '/rss.xml' }}" target="_blank" title="RSS" rel="nofollow"><span class='fa fa-rss fa-2x'></span></a></li>
   </ul>
 </header>
