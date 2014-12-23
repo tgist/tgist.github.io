@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="col-md-9">
   {% for post in paginator.posts %}
-  <h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+  <a href="{{ post.url }}"><h3 class="title">{{ post.title }}</h3></a>
   {% if post.content contains "<!-- more -->" %}
   {{ post.content | split:'<!-- more -->' | first }}
   {% else %}
@@ -41,4 +41,3 @@ layout: default
   {% include recently_comments.html %}
   {% include blogroll.html %}
 </aside>
-<div class="clearfix"></div>
