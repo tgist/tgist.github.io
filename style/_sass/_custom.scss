@@ -135,14 +135,14 @@ time.small {
       @include img;
     }
     code {
-      background-color: rgba(255, 204, 204, .3);
+      background-color: rgba(0, 153, 153, .167);
       box-shadow: 0 0 1px rgba(0, 0, 0, .167);
       border: 1px solid rgba(102, 102, 102, .167);
       @include monospace;
     }
   }
   .highlight pre {
-    background-color: rgba(102, 255, 255, .167);
+    background-color: rgba(0, 153, 153, .167);
     box-shadow: 0 0 3px rgba(0, 0, 0, .267);
     border: 1px solid rgba(102, 102, 102, .35);
     max-width: 95%;
@@ -174,22 +174,23 @@ table {
   margin-bottom: 20px;
   max-width: 100%;
   border-collapse: collapse;
-  border: 1px solid rgba(50, 118, 177, .167);
+  border: 1px solid rgba(102, 102, 102, .167);
   @include transition;
   &:hover {
-    border: 1px solid rgba(50, 118, 177, .35);
+    border: 1px solid rgba(102, 102, 102, .35);
     box-shadow: 0 0 3 rgba(50, 118, 177, .267);
     @include transition;
   }
   thead tr th {
-    border: 1px solid rgba(50, 118, 177, .167);
+    color: rgba(0, 153, 153, .8);
+    border: 1px solid rgba(102, 102, 102, .167);
     border-top: 0 none;
     border-bottom-width: 2px;
     vertical-align: bottom;
     padding: 8px;
   }
   tbody tr td {
-    border: 1px solid rgba(50, 118, 177, .167);
+    border: 1px solid rgba(102, 102, 102, .167);
     vertical-align: middle;
     padding: 8px;
   }
@@ -197,14 +198,27 @@ table {
     background-color: rgba(249, 249, 249, .9);
   }
   tbody > tr:nth-child(2n+1) {
-    background-color: rgba(249, 249, 249, .5);
+    background-color: rgba(249, 249, 249, .1);
   }
   tbody tr {
+    background-color: rgba(249, 249, 249, .6);
     &:hover {
-      background-color: rgba(235, 235, 235, .7);
+      background-color: rgba(0, 153, 153, .167);
       @include transition;
     }
   }
+}
+
+.btn-primary {
+  border: 1px solid rgba(102, 102, 102, .167);
+  background-color: rgba(0, 153, 153, 0.8);
+  &:hover, &:focus {
+    background-color: rgba(000, 102, 102, .8);
+  }
+}
+.btn-primary.disabled {
+  border: 1px solid rgba(102, 102, 102, .167);
+  background-color: rgba(0, 153, 153, 0.7);
 }
 
 .footer {
