@@ -70,6 +70,11 @@ h6 {
   color: rgba(000, 000, 000, .8);
 }
 
+time.small {
+  font-size: 50%;
+  color: rgba(119, 119, 119, 0.8);
+}
+
 .header {
   display: inline;
   .title {
@@ -111,9 +116,6 @@ h6 {
   background: rgba(253, 253, 253, .9);
   padding: 10px 10px 20px 10px;
   margin: 20px 0;
-  .small {
-    color: rgba(119, 119, 119, .8);
-  }
   p, ol, ul, table {
     li {
       margin: 5px 0;
