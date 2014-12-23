@@ -221,6 +221,13 @@ table {
   background-color: rgba(0, 153, 153, 0.7);
 }
 
+.previous > a, .next > a {
+  color: rgba(0, 153, 153, 0.8);
+  &:hover, &:focus {
+    color: rgba(0, 102, 102, 0.8);
+  }
+}
+
 .footer {
   padding: 0 15px;
   p {
