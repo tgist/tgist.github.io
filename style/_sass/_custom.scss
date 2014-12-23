@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6, strong {
 
 time.small {
   font-size: 50%;
-  color: rgba(119, 119, 119, 0.8);
+  color: rgba(119, 119, 119, .8);
 }
 
 .header {
@@ -209,22 +209,32 @@ table {
   }
 }
 
+.navbar-toggle {
+  background-color: rgba(0, 153, 153, .8);
+  &:hover, &:focus {
+    background-color: rgba(0, 102, 102, .8);
+  }
+  .icon-bar {
+    background-color: rgba(249, 249, 249, .8);
+  }
+}
+
 .btn-primary {
   border: 1px solid rgba(102, 102, 102, .167);
-  background-color: rgba(0, 153, 153, 0.8);
+  background-color: rgba(0, 153, 153, .8);
   &:hover, &:focus {
     background-color: rgba(000, 102, 102, .8);
   }
 }
 .btn-primary.disabled {
   border: 1px solid rgba(102, 102, 102, .167);
-  background-color: rgba(0, 153, 153, 0.7);
+  background-color: rgba(0, 153, 153, .7);
 }
 
 .previous > a, .next > a {
-  color: rgba(0, 153, 153, 0.8);
+  color: rgba(0, 153, 153, .8);
   &:hover, &:focus {
-    color: rgba(0, 102, 102, 0.8);
+    color: rgba(0, 102, 102, .8);
   }
 }
 
