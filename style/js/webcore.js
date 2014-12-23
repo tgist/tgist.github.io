@@ -69,12 +69,12 @@
           matches.push({'title': title, 'link': link, 'date': updated, 'content': content});
         }
       }
-      var html = '<h2>Search Result:</h2><br>';
+      var html = '<h2 style="margin: 0 15px;">Search Result:</h2><br>';
       for (var i = 0; i < matches.length; i++) {
         var match = matches[i];
-        html += '<h2><a href="' + match.link + '">' + htmlEscape(match.title) + '</a></h2>';
-        html += '<section><p>' + htmlEscape(match.content) + '</p></section>';
-        html += '<footer><p>Update: ' + match.date + '</p></footer>';
+        html += '<h3 style="margin: 0 15px;"><a href="' + match.link + '">' + htmlEscape(match.title) + '</a></h3>';
+        html += '<section style="margin: 0 15px;"><p>' + htmlEscape(match.content) + '</p></section>';
+        html += '<footer style="margin: 0 15px;"><p>Update: ' + match.date + '</p></footer>';
       }
       $('.row').html(html);
       $('#search-loader').hide();
