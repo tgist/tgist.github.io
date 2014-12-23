@@ -31,34 +31,28 @@ h2 {
   border-bottom: 2px solid rgba(255, 000, 255, .375);
   &:hover, &:focus {
     color: rgba(153, 000, 153, .8);
+    border-bottom: 2px solid rgba(153, 000, 153, .375);
   }
 }
 
 h3 {
   font-size: 24px;
   color: rgba(000, 153, 051, .8);
-  //max-width: 50%;
-  border-bottom: 2px dashed rgba(000, 153, 051, .375);
   &:hover, &:focus {
     color: rgba(000, 102, 051, .8);
   }
 }
 
 h4 {
-  font-size: 22px;
+  font-size: 24px;
   color: rgba(153, 000, 000, .8);
   &:hover, &:focus {
     color: rgba(102, 000, 000, .8);
   }
 }
 
-h1, h2, h3, h4, h5, h6, strong {
-  line-height: 1.8;
-  @include text-shadow;
-}
-
 h5 {
-  font-size: 18px;
+  font-size: 20px;
   color: rgba(102, 102, 051, .8);
   &:hover, &:focus {
     color: rgba(051, 051, 000, .8)
@@ -66,8 +60,13 @@ h5 {
 }
 
 h6 {
-  font-size: 16px;
+  font-size: 20px;
   color: rgba(000, 000, 000, .8);
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  line-height: 1.8;
+  @include text-shadow;
 }
 
 time.small {
@@ -116,6 +115,18 @@ time.small {
   background: rgba(253, 253, 253, .9);
   padding: 10px 10px 20px 10px;
   margin: 20px 0;
+  .title {
+    border-bottom: 2px dashed rgba(000, 153, 051, .375);
+    &:hover, &:focus {
+      border-bottom: 2px dashed rgba(000, 102, 051, .375);
+    }
+    a {
+      color: rgba(000, 153, 051, .8);
+      &:hover, &:focus {
+        color: rgba(000, 102, 051, .8);
+      }
+    }
+  }
   p, ol, ul, table {
     li {
       margin: 5px 0;

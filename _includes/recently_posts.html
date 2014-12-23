@@ -1,5 +1,5 @@
 <section>
-  <h3>Recently Posts</h3>
+  <h3 class="title">Recently Posts</h3>
   <ul>
     {% for post in site.posts limit:10 %}
     <li><a href="{{ BASE_PATH }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
