@@ -90,6 +90,7 @@ time.small {
   ul {
     li {
       margin: 4px 0;
+      display: inline-block;
       a {
         color: rgba(000, 153, 153, .8);
         @include text-shadow;
