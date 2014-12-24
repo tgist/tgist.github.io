@@ -204,8 +204,10 @@ table {
   thead > tr {
     background-color: rgba(249, 249, 249, .9);
   }
-  tbody > tr:nth-child(2n+1) {
-    background-color: rgba(000, 153, 153, .1);
+  tbody > tr {
+    &:nth-child(2n+1) {
+      background-color: rgba(000, 153, 153, .1);
+    }
   }
   tbody tr {
     background-color: rgba(249, 249, 249, .6);
