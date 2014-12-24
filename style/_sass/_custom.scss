@@ -1,7 +1,7 @@
 body {
   font-size: 16px;
   line-height: 1.6;
-  color: rgba(51, 51, 51, .9);
+  color: rgba(051, 051, 051, .9);
   background-color: rgba(204, 204, 204, .3);
   word-break: break-all;
   @include sans-serif;
@@ -111,14 +111,16 @@ time.small {
 }
 
 .wrapper {
-  border: 1px solid rgba(0, 0, 0, .17);
+  border: 1px solid rgba(000, 000, 000, .17);
   box-shadow: 0 1px 10px rgba(170, 170, 170, .8);
   background: rgba(253, 253, 253, .9);
   padding: 10px 10px 20px 10px;
   margin: 20px 0;
   .title {
+    color: rgba(000, 153, 051, .8);
     border-bottom: 2px dashed rgba(000, 153, 051, .375);
     &:hover, &:focus {
+      color: rgba(000, 102, 051, .8);
       border-bottom: 2px dashed rgba(000, 102, 051, .375);
     }
     a {
@@ -136,18 +138,21 @@ time.small {
       @include img;
     }
     code {
-      background-color: rgba(0, 153, 153, .167);
-      box-shadow: 0 0 1px rgba(0, 0, 0, .167);
+      background-color: rgba(000, 153, 153, .167);
+      box-shadow: 0 0 1px rgba(000, 000, 000, .167);
       border: 1px solid rgba(102, 102, 102, .167);
       @include monospace;
     }
   }
   .highlight pre {
-    background-color: rgba(0, 153, 153, .167);
-    box-shadow: 0 0 3px rgba(0, 0, 0, .267);
+    background-color: rgba(000, 153, 153, .167);
+    box-shadow: 0 0 3px rgba(000, 053, 051, .167);
     border: 1px solid rgba(102, 102, 102, .35);
     max-width: 95%;
     margin: 10px auto;
+    &:hover, &:focus {
+      box-shadow: 0 0 5px rgba(000, 153, 051, .35);
+    }
     code {
       @include monospace;
     }
@@ -175,11 +180,12 @@ table {
   margin-bottom: 20px;
   max-width: 100%;
   border-collapse: collapse;
+  box-shadow: 0 0 3px rgba(000, 053, 051, .167);
   border: 1px solid rgba(102, 102, 102, .167);
   @include transition;
   &:hover {
     border: 1px solid rgba(102, 102, 102, .35);
-    box-shadow: 0 0 3 rgba(50, 118, 177, .267);
+    box-shadow: 0 0 5px rgba(000, 153, 051, .35);
     @include transition;
   }
   thead tr th {
@@ -199,21 +205,21 @@ table {
     background-color: rgba(249, 249, 249, .9);
   }
   tbody > tr:nth-child(2n+1) {
-    background-color: rgba(249, 249, 249, .1);
+    background-color: rgba(000, 153, 153, .1);
   }
   tbody tr {
     background-color: rgba(249, 249, 249, .6);
     &:hover {
-      background-color: rgba(0, 153, 153, .167);
+      background-color: rgba(000, 153, 153, .3);
       @include transition;
     }
   }
 }
 
 .navbar-toggle {
-  background-color: rgba(0, 153, 153, .8);
+  background-color: rgba(000, 153, 153, .8);
   &:hover, &:focus {
-    background-color: rgba(0, 102, 102, .8);
+    background-color: rgba(000, 102, 102, .8);
   }
   .icon-bar {
     background-color: rgba(249, 249, 249, .8);
@@ -222,20 +228,20 @@ table {
 
 .btn-primary {
   border: 1px solid rgba(102, 102, 102, .167);
-  background-color: rgba(0, 153, 153, .8);
+  background-color: rgba(000, 153, 153, .8);
   &:hover, &:focus {
     background-color: rgba(000, 102, 102, .8);
   }
 }
 .btn-primary.disabled {
   border: 1px solid rgba(102, 102, 102, .167);
-  background-color: rgba(0, 153, 153, .7);
+  background-color: rgba(000, 153, 153, .7);
 }
 
 .previous > a, .next > a {
-  color: rgba(0, 153, 153, .8);
+  color: rgba(000, 153, 153, .8);
   &:hover, &:focus {
-    color: rgba(0, 102, 102, .8);
+    color: rgba(000, 102, 102, .8);
   }
 }
 

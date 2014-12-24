@@ -26,5 +26,8 @@
   display: inherit;
   border-radius: 6px;
   line-height: 1.429;
-  box-shadow: 0 4px 8px rgba(170, 170, 170, .8);
+  box-shadow: 0 0 5px rgba(170, 170, 170, .8);
+  &:hover, &:focus {
+    box-shadow: 0 0 5px rgba(000, 153, 051, .35);
+  }
 }
