@@ -73,7 +73,7 @@ task :preview do
   system "jekyll server -w"
 end # task :preview
 
-desc "use qiniu sync tool to sync qiniu folder to remote server"
+desc "synchronize qiniu folder to remote server with qiniu sync tool"
 task :qrsync do
   name = "qiniu.json"
   filename = File.join("#{Dir.pwd}", "#{name}")
