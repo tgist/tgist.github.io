@@ -75,12 +75,17 @@ end # task :preview
 
 desc "synchronize qiniu folder to remote server with qiniu sync tool"
 task :qrsync do
-  name = "qiniu.json"
-  filename = File.join("#{Dir.pwd}", "#{name}")
-  abort("rake aborted: '#{Dir.pwd}/qrsync' file not found.") unless FileTest.file?("#{Dir.pwd}/qrsync")
+  bin = "qrsync"
+  json = "qiniu.json"
+  ignore = ".gitignore"
+  filebin = File.join("#{Dir.pwd}", "#{bin}")
+  filejson = File.join("#{Dir.pwd}", "#{json}")
+  fileignore = File.join("#{Dir.pwd}", "#{ignore}")
 
-  unless FileTest.file?("#{filename}")
-    open(filename, 'w') do |json|
+  abort("rake aborted: '#{filebin}' file not found.") unless FileTest.file?(filebin)
+
+  unless FileTest.file?(filejson)
+    open(filejson, 'w') do |json|
       json.puts '{'
       json.puts '    "access_key": "your access key",'
       json.puts '    "secret_key": "your secret_key",'
@@ -90,9 +95,12 @@ task :qrsync do
       json.puts '    "debug_level": 1'
       json.puts '}'
     end
-    puts "please edit qiniu.json, and add qiniu.json in .gitignore"
+
+    open(fileignore, 'a') { |ignore| ignore.puts "#{json}" } unless (fileignore).include?(json)
+
+    puts "please edit #{filejson}"
   else
-    system "#{Dir.pwd}/qrsync #{filename}"
+    system "#{Dir.pwd}/qrsync #{filejson}"
   end
 
 end
