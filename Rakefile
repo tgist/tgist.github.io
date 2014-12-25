@@ -82,7 +82,7 @@ task :qrsync do
   filejson = File.join(Dir.pwd, json)
   fileignore = File.join(Dir.pwd, ignore)
 
-  abort("rake aborted: '#{filebin}' file not found.") unless FileTest.file?(filebin)
+  abort("rake aborted: '#{filebin}' file not found.") unless File.exist?(filebin)
 
   unless File.exist?(filejson)
     open(filejson, 'w') do |json|
