@@ -78,9 +78,9 @@ task :qrsync do
   bin = "qrsync"
   json = "qiniu.json"
   ignore = ".gitignore"
-  filebin = File.join("#{Dir.pwd}", "#{bin}")
-  filejson = File.join("#{Dir.pwd}", "#{json}")
-  fileignore = File.join("#{Dir.pwd}", "#{ignore}")
+  filebin = File.join(Dir.pwd, bin)
+  filejson = File.join(Dir.pwd, json)
+  fileignore = File.join(Dir.pwd, ignore)
 
   abort("rake aborted: '#{filebin}' file not found.") unless FileTest.file?(filebin)
 
