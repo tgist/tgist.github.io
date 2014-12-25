@@ -95,9 +95,7 @@ task :qrsync do
       json.puts '    "debug_level": 1'
       json.puts '}'
     end
-
     open(fileignore, 'a') { |ignore| ignore.puts "#{json}" } unless (fileignore).include?(json)
-
     puts "please edit #{filejson}"
   else
     system "#{Dir.pwd}/qrsync #{filejson}"
