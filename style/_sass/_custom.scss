@@ -147,7 +147,9 @@ time.small {
   .highlight pre {
     background-color: rgba(000, 153, 153, .167);
     box-shadow: 0 0 3px rgba(000, 053, 051, .167);
-    border: 1px solid rgba(102, 102, 102, .35);
+    border-color: rgba(102, 102, 102, .35);
+    border-style: solid;
+    border-width: 1px 1px 1px 5px;
     max-width: 95%;
     margin: 10px auto;
     &:hover, &:focus {
@@ -155,6 +157,27 @@ time.small {
     }
     code {
       @include monospace;
+    }
+  }
+  blockquote {
+    background-color: rgba(0,153,51,0.167);
+    box-shadow: 0 0 6px rgba(000, 153, 51, .167);
+    border-color: rgba(102, 102, 102, .35);
+    border-style: solid;
+    border-width: 1px 1px 1px 4px;
+    border-radius: 4px;
+    max-width: 95%;
+    margin: 15px auto;
+    position: relative;
+    &:before {
+      color: rgba(102, 102, 102, .7);
+      content: "\201C";
+      font-family: Times, serif;
+      font-size: 34px;
+      font-weight: bold;
+      position: absolute;
+      top: 0;
+      left:0;
     }
   }
   hr {
