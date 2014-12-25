@@ -73,5 +73,10 @@ task :preview do
   system "jekyll server -w"
 end # task :preview
 
+desc "use qiniu sync tool to sync qiniu folder to remote server"
+task :qrsync do
+  system "#{Dir.pwd}/qrsync #{Dir.pwd}/qiniu.json"
+end
+
 #Load custom rake scripts
 Dir['_rake/*.rake'].each { |r| load r }

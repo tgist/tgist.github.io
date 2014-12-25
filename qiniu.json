@@ -1,0 +1,8 @@
+{
+    "access_key": "your access key",
+    "secret_key": "your secret_key",
+    "bucket": "your bucket name",
+    "sync_dir": "local directory to upload",
+    "async_ops": "",
+    "debug_level": 1
+}
