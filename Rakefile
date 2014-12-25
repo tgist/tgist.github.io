@@ -75,8 +75,28 @@ end # task :preview
 
 desc "use qiniu sync tool to sync qiniu folder to remote server"
 task :qrsync do
+  name = "qiniu.json"
+  filename = File.join("#{name}")
   abort("rake aborted: '#{Dir.pwd}/qrsync' file not found.") unless FileTest.file?("#{Dir.pwd}/qrsync")
-  system "#{Dir.pwd}/qrsync #{Dir.pwd}/qiniu.json"
+
+  unless FileTest.file?("#{Dir.pwd}/qiniu.json")
+    name = "qiniu.json"
+    filename = File.join("#{Dir.pwd}", "#{name}")
+    open(filename, 'w') do |json|
+      json.puts '{'
+      json.puts '    "access_key": "your access key",'
+      json.puts '    "secret_key": "your secret_key",'
+      json.puts '    "bucket": "your bucket name",'
+      json.puts '    "sync_dir": "local directory to upload",'
+      json.puts '    "async_ops": "",'
+      json.puts '    "debug_level": 1'
+      json.puts '}'
+    end
+    puts "please edit qiniu.json, and add qiniu.json in .gitignore"
+  else
+    system "#{Dir.pwd}/qrsync #{Dir.pwd}/qiniu.json"
+  end
+
 end
 
 #Load custom rake scripts
