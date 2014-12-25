@@ -84,7 +84,7 @@ task :qrsync do
 
   abort("rake aborted: '#{filebin}' file not found.") unless FileTest.file?(filebin)
 
-  unless FileTest.file?(filejson)
+  unless File.exist?(filejson)
     open(filejson, 'w') do |json|
       json.puts '{'
       json.puts '    "access_key": "your access key",'
@@ -95,7 +95,13 @@ task :qrsync do
       json.puts '    "debug_level": 1'
       json.puts '}'
     end
-    open(fileignore, 'a') { |ignore| ignore.puts "#{json}" } unless (fileignore).include?(json)
+    if File.exist?(fileignore)
+      unless File.open(fileignore).each_line.any?{ |line| line.include?(json) }
+        open(fileignore, 'a') { |ignore| ignore.puts "#{json}" }
+      end
+    else
+      open(fileignore, 'w') { |ignore| ignore.puts "#{json}" }
+    end
     puts "please edit #{filejson}"
   else
     system "#{Dir.pwd}/qrsync #{filejson}"
