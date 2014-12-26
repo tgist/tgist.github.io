@@ -25,6 +25,10 @@ redcarpet:
     extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough"]
 permalink: /:categories/:year-:month/:title.html
 
+sass:
+    sass_dir: style/_sass
+    style: :compressed
+
 # comment
 comments:
     duoshuo:
