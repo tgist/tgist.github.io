@@ -2,7 +2,7 @@
 <section>
 <h3 class="title">Blogroll</h3>
 <ul>
-  {% for list in site.data.blogroll.list %}
+  {% for list in site.data.blogroll %}
   <li><a href="{{ list.url }}" title="{{ list.title }}">{{ list.title }}</a></li>
   {% endfor %}
 </ul>
