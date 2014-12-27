@@ -1,9 +1,9 @@
-{% if site.blogroll != false %}
+{% if site.data.blogroll %}
 <section>
 <h3 class="title">Blogroll</h3>
 <ul>
-  {% for link in site.brlist %}
-  <li><a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a></li>
+  {% for list in site.data.blogroll.list %}
+  <li><a href="{{ list.url }}" title="{{ list.title }}">{{ list.title }}</a></li>
   {% endfor %}
 </ul>
 </section>

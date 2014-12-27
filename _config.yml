@@ -45,8 +45,3 @@ analytics:
     baidu:
         siteid:                             # 百度统计 js 代码后的字符串
 
-# blogroll
-blogroll: true
-brlist:
-    - text: "Havee's Space"
-      url : //havee.me/
