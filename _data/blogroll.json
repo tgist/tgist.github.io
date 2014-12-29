@@ -1,10 +1,10 @@
 [
     {
-        title: "Havee's Space",
+        "title": "Havee's Space",
         url: "//havee.me"
     },
     {
-        title: "Jekyll",
-        url: "//jekyllrb.com"
+        "title": "Jekyll",
+        "url": "//jekyllrb.com"
     },
 ]
