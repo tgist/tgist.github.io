@@ -1,0 +1,332 @@
+/* This is base content. */
+
+$base01: crimson;
+$base02: fuchsia;
+$base03: green;
+$base04: chocolate;
+$base05: cyan;
+$base06: moccasin;
+$base07: white;
+$base08: black;
+
+$font-size: 16px;
+
+@mixin sans-serif {
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+
+@mixin serif {
+  font-family: serif;
+}
+
+@mixin monospace {
+  font-family: Monaco, Consolas, Terminal, monospace;
+}
+
+@mixin text-shadow {
+  text-shadow:  0 1px 1px rgba($base07, .8);
+}
+
+@mixin img {
+  max-width: 85%;
+  margin: 0 auto;
+  display: inherit;
+  border-radius: 6px;
+  line-height: 1.429;
+  box-shadow: 0 0 5px rgba(lighten($base03, 10%), .167);
+  &:hover, &:focus {
+    box-shadow: 0 0 5px rgba(lighten($base03, 10%), .35);
+  }
+}
+
+/* custom */
+body {
+  font-size: $font-size;
+  line-height: 1.6;
+  color: lighten($base08, 10%);
+  background-color: darken($base07, 10%);
+  word-break: break-all;
+  @include sans-serif;
+}
+
+body * {
+	transition: all .2s;
+}
+
+a {
+  color: darken($base05, 15%);
+  &:hover, &:focus {
+    color: darken($base05, 25%);
+    text-decoration: none;
+  }
+}
+
+h1 {
+  font-size: $font-size*2;
+  color: $base01;
+  &:hover, &:focus {
+    color: darken($base01, 10%);
+  }
+}
+
+h2 {
+  font-size: $font-size*1.75;
+  color: $base02;
+  &:hover, &:focus {
+    color: darken($base02, 10%);
+  }
+}
+
+h3 {
+  font-size: $font-size*1.5;
+  color: lighten($base03, 10%);
+  &:hover, &:focus {
+    color: $base03;
+  }
+}
+
+h4 {
+  font-size: $font-size*1.5;
+  color: $base04;
+  &:hover, &:focus {
+    color: darken($base04, 10%);
+  }
+}
+
+h5 {
+  font-size: $font-size*1.25;
+  color: darken($base05, 15%);
+  &:hover, &:focus {
+    color: darken($base05, 25%);
+  }
+}
+
+h6 {
+  font-size: $font-size*1.25;
+  color: darken($base06, 30%);
+  &:hover, &:focus {
+	  color: darken($base06, 40%);
+  }
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  line-height: 1.8;
+  @include text-shadow;
+}
+
+time.small {
+  font-size: 50%;
+  color: darken($base07, 50% );
+}
+
+.header {
+  display: inline;
+  .title {
+    font-size: $font-size*2.25;
+    padding-left: 15px;
+    display: inline;
+    @include text-shadow;
+    a {
+      color: darken($base05, 15%);
+      &:hover, &:focus {
+        color: darken($base05, 25%);
+      }
+    }
+  }
+  ul {
+    li {
+      margin: 4px 0;
+      display: inline-block;
+      a {
+        color: darken($base05, 15%);
+        @include text-shadow;
+        &:hover, &:focus {
+          color: darken($base05, 25%);
+          background: transparent;
+        }
+      }
+      form {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+.container {
+  padding: 0 5px;
+}
+
+.wrapper {
+  border: 1px solid rgba($base08, .17);
+  box-shadow: 0 1px 10px rgba($base08, .35);
+  background: $base07;
+  padding: 10px 10px 20px 10px;
+  margin: 5px 0 15px;
+  .title {
+    color: lighten($base03, 10%);
+    border-bottom: 2px dashed lighten($base03, 10%);
+    &:hover, &:focus {
+      color: $base03;
+      border-bottom: 2px dashed $base03;
+    }
+  }
+  p, ol, ul, table {
+    li {
+      margin: 5px 0;
+    }
+    img {
+      @include img;
+    }
+    code {
+      background-color: rgba($base06, .167);
+      box-shadow: 0 0 1px rgba($base08, .167);
+      border: 1px solid rgba($base08, .35);
+      @include monospace;
+    }
+  }
+  .highlight pre {
+    background-color: rgba(darken($base05, 15%), .167);
+    box-shadow: 0 0 3px rgba(darken($base05, 15%), .167);
+    border-color: rgba(darken($base05, 15%), .35);
+    border-style: solid;
+    border-width: 1px 1px 1px 5px;
+	border-radius: 4px;
+    max-width: 95%;
+    margin: 10px auto;
+    &:hover, &:focus {
+      box-shadow: 0 0 5px rgba(darken($base05, 15%), .35);
+    }
+    code {
+      @include monospace;
+    }
+  }
+  blockquote {
+    background-color: rgba(lighten($base03, 10%),0.167);
+    box-shadow: 0 0 3px rgba($base03, .167);
+    border-color: rgba($base03, .35);
+    border-style: solid;
+    border-width: 1px 1px 1px 5px;
+    border-radius: 4px;
+    max-width: 95%;
+    margin: 15px auto;
+    position: relative;
+    &:before, &:after {
+      color: rgba($base08, .3);
+      content: "\201C";
+      font-family: Times, serif;
+      font-size: 34px;
+      font-weight: bold;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &:before {
+      top: 0;
+      left: 0;
+    }
+  }
+  hr {
+    border-color: lighten($base03, 10%);
+  }
+  .tag-box {
+    display: table;
+    list-style: none outside none;
+    li {
+      line-height: 1.8;
+      display: inline-block;
+      margin: 0 3px;
+      a {
+        padding: 2px 4px;
+        background-color: rgba(darken($base06, 30%),.3);
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+table {
+  margin-bottom: 20px;
+  max-width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 3px rgba(lighten($base03, 10%), .167);
+  border: 1px solid rgba(lighten($base03, 10%), .167);
+  &:hover {
+    border: 1px solid rgba(lighten($base03, 10%), .35);
+    box-shadow: 0 0 5px rgba(lighten($base03, 10%), .35);
+  }
+  thead tr th {
+    color: rgba(darken($base05, 15%), .8);
+    border: 1px solid rgba(lighten($base03, 10%), .167);
+    border-top: 0 none;
+    border-bottom-width: 2px;
+    vertical-align: bottom;
+    padding: 8px;
+  }
+  tbody tr td {
+    border: 1px solid rgba(lighten($base03, 10%), .167);
+    vertical-align: middle;
+    padding: 8px;
+  }
+  thead > tr {
+    background-color: rgba(darken($base07, 10%), .2);
+  }
+  tbody > tr {
+    &:nth-child(2n+1) {
+      background-color: rgba(darken($base05, 15%), .1);
+    }
+  }
+  tbody tr {
+    background-color: rgba(darken($base07, 10%), .1);
+    &:hover {
+      background-color: rgba(darken($base05, 15%), .3);
+    }
+  }
+}
+
+.navbar-toggle {
+  background-color: rgba(darken($base05, 15%), .8);
+  &:hover, &:focus {
+    background-color: rgba(darken($base05, 25%), .8);
+  }
+  .icon-bar {
+    background-color: rgba(darken($base07, 10%), .8);
+  }
+}
+
+.btn-primary {
+  border: 1px solid rgba(darken($base05, 25%), .167);
+  background-color: rgba(darken($base05, 15%), .8);
+  &:hover, &:focus {
+    background-color: rgba(darken($base05, 25%), .8);
+  }
+}
+.btn-primary.disabled {
+  border: 1px solid rgba(darken($base05, 25%), .167);
+  background-color: rgba(darken($base05, 15%), .7);
+}
+
+.previous > a, .next > a {
+  color: rgba(darken($base05, 15%), .8);
+  &:hover, &:focus {
+    color: rgba(darken($base05, 25%), .8);
+  }
+}
+
+.footer {
+  padding: 0 15px;
+  p {
+    color: darken($base07, 50% );
+    line-height: 1;
+    a {
+      color: darken($base07, 50% );
+      &:hover, &:focus {
+        color: lighten($base08, 30% );
+      }
+    }
+  }
+}
+
+#search-loader {
+  display: none;
+  text-align: center;
+}

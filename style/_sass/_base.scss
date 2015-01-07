@@ -1,5 +1,14 @@
 /* This is base content. */
 
+$base00: white;
+$base01: black;
+$base02: fuchsia;
+$base03: chocolate;
+$base04: green;
+$base05: indianred;
+$base06: cyan;
+$base07: moccasin;
+
 @mixin sans-serif {
   font-family: Tahoma, Arial, Helvetica, sans-serif;
 }
@@ -16,8 +25,8 @@
   transition: all $a;
 }
 
-@mixin text-shadow($a: 255, $b: 1px, $c: 170) {
-  text-shadow: 0 1px 0 rgb($a, $a, $a), 0 1px $b rgba($c, $c, $c, .8);
+@mixin text-shadow {
+  text-shadow:  0 1px 1px rgba($base00, .8);
 }
 
 @mixin img {
