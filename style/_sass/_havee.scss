@@ -44,9 +44,9 @@ body * {
 }
 
 a {
-  color: darken($base05, 15%);
+  color: darken($base09, 20%);
   &:hover, &:focus {
-    color: darken($base05, 25%);
+    color: darken($base09, 40%);
     text-decoration: none;
   }
 }
