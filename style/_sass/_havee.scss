@@ -44,9 +44,9 @@ body * {
 }
 
 a {
-  color: darken($base09, 20%);
+  color: darken($base05, 15%);
   &:hover, &:focus {
-    color: darken($base09, 40%);
+    color: darken($base05, 30%);
     text-decoration: none;
   }
 }
@@ -87,7 +87,7 @@ h5 {
   font-size: $font-size*1.25;
   color: darken($base05, 15%);
   &:hover, &:focus {
-    color: darken($base05, 25%);
+    color: darken($base05, 30%);
   }
 }
 
@@ -119,7 +119,7 @@ time.small {
     a {
       color: darken($base05, 15%);
       &:hover, &:focus {
-        color: darken($base05, 25%);
+        color: darken($base05, 30%);
       }
     }
   }
@@ -131,7 +131,7 @@ time.small {
         color: darken($base05, 15%);
         @include text-shadow;
         &:hover, &:focus {
-          color: darken($base05, 25%);
+          color: darken($base05, 30%);
           background: transparent;
         }
       }
@@ -149,7 +149,7 @@ time.small {
 .wrapper {
   border: 1px solid rgba($base08, $alpha);
   box-shadow: 0 1px 10px rgba($base08, $alpha*2);
-  background: rgba($base07, .835);
+  background: rgba($base07, $alpha*5);
   padding: 10px 10px 20px 10px;
   margin: 5px 0 15px;
   .title {
@@ -276,7 +276,7 @@ table {
 .navbar-toggle {
   background-color: rgba(darken($base05, 15%), $alpha*5);
   &:hover, &:focus {
-    background-color: rgba(darken($base05, 25%), $alpha*5);
+    background-color: rgba(darken($base05, 30%), $alpha*5);
   }
   .icon-bar {
     background-color: rgba(darken($base07, 10%), $alpha*5);
@@ -284,21 +284,21 @@ table {
 }
 
 .btn-primary {
-  border: 1px solid rgba(darken($base05, 25%), $alpha);
+  border: 1px solid rgba(darken($base05, 30%), $alpha);
   background-color: rgba(darken($base05, 15%), $alpha*5);
   &:hover, &:focus {
-    background-color: rgba(darken($base05, 25%), $alpha*5);
+    background-color: rgba(darken($base05, 30%), $alpha*5);
   }
 }
 .btn-primary.disabled {
-  border: 1px solid rgba(darken($base05, 25%), $alpha);
+  border: 1px solid rgba(darken($base05, 30%), $alpha);
   background-color: rgba(darken($base05, 15%), $alpha*4);
 }
 
 .previous > a, .next > a {
   color: rgba(darken($base05, 15%), $alpha*5);
   &:hover, &:focus {
-    color: rgba(darken($base05, 25%), $alpha*5);
+    color: rgba(darken($base05, 30%), $alpha*5);
   }
 }
 
