@@ -7,3 +7,7 @@
 #### create new page
 
 	rake page name='about.html'
+
+#### define your color
+
+Edit the file:  `style/_sass/_custom.scss`

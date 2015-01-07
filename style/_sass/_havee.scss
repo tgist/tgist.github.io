@@ -1,15 +1,6 @@
+@import "custom";
+
 /* This is base content. */
-
-$base01: crimson;
-$base02: fuchsia;
-$base03: green;
-$base04: chocolate;
-$base05: cyan;
-$base06: moccasin;
-$base07: white;
-$base08: black;
-
-$font-size: 16px;
 
 @mixin sans-serif {
   font-family: Tahoma, Arial, Helvetica, sans-serif;
@@ -39,7 +30,6 @@ $font-size: 16px;
   }
 }
 
-/* custom */
 body {
   font-size: $font-size;
   line-height: 1.6;
