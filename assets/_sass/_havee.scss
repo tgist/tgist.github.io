@@ -23,7 +23,7 @@ body {
   line-height: 1.6;
   word-break: break-all;
   color: lighten($base08, 10%);
-  background: linear-gradient(180deg, darken($base07, 10%), $base07);
+  background: darken($base07, 10%);
   @include sans-serif;
   * {
     transition: all .2s;
