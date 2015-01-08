@@ -23,7 +23,7 @@ body {
   line-height: 1.6;
   word-break: break-all;
   color: lighten($base08, 10%);
-  background-color: rgba(darken($base07, 10%), $alpha*2);
+  background: linear-gradient(180deg, darken($base07, 10%), $base07);
   @include sans-serif;
   * {
     transition: all .2s;
@@ -225,6 +225,9 @@ table {
     vertical-align: middle;
     padding: 8px;
     border: 1px solid rgba(darken($base05, 15%), $alpha*2);
+	&:hover {
+      background-color: rgba(darken($base05, 30%), $alpha*2);
+    }
   }
   thead > tr {
     background-color: rgba(darken($base07, 10%), $alpha*2);
