@@ -15,7 +15,7 @@
 }
 
 @mixin text-shadow {
-  text-shadow:  0 1px 1px rgba($base07, $alpha*5);
+  text-shadow:  0 1px 1px $base07, 0 1px 1px rgba($base08, $alpha*3);
 }
 
 @mixin img {
@@ -102,6 +102,9 @@ h6 {
 h1, h2, h3, h4, h5, h6, strong {
   line-height: 1.8;
   @include text-shadow;
+  &:hover, &:focus {
+	@include text-shadow;
+  }
 }
 
 time.small {
