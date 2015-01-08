@@ -15,7 +15,7 @@
 }
 
 @mixin text-shadow {
-  text-shadow:  0 1px 1px $base07, 0 1px 1px rgba($base08, $alpha*3);
+  text-shadow:  0 1px 0px $base07, 0 1px 1px rgba($base08, $alpha*3);
 }
 
 @mixin img {
