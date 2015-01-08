@@ -6,7 +6,7 @@ description: "业余爱好的点滴记录，同时作为配置备份的存储地
 
 #### Blog QR Code:
 
-![Blog QR Code](/style/img/url.png "Blog QR Code")
+![Blog QR Code](/assets/img/url.png "Blog QR Code")
 
 #### ChangeLog
 

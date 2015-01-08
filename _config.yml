@@ -3,7 +3,7 @@ title: "Jekyll template"
 description: "jekyll template demo."
 keywords: "jekyll, template, demo"
 baseurl: ""
-url: "http:////ihavee.github.io"
+url: "//ihavee.github.io"
 highlighter: pygments
 paginate: 5
 author:
