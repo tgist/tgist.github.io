@@ -15,19 +15,7 @@
 }
 
 @mixin text-shadow {
-  text-shadow:  0 1px 0px $base07, 0 1px 1px rgba($base08, $alpha*3);
-}
-
-@mixin img {
-  display: inherit;
-  max-width: 85%;
-  margin: 0 auto;
-  line-height: 1.429;
-  border-radius: 6px;
-  box-shadow: 0 0 5px rgba(lighten($base03, 10%), $alpha);
-  &:hover, &:focus {
-    box-shadow: 0 0 5px rgba(lighten($base03, 10%), $alpha*2);
-  }
+  text-shadow: 0 1px 0px $base07, 0 1px 1px rgba($base08, $alpha*3);
 }
 
 body {
@@ -53,57 +41,36 @@ a {
 h1 {
   font-size: $font-size*2;
   color: $base01;
-  &:hover, &:focus {
-    color: darken($base01, 10%);
-  }
 }
 
 h2 {
   font-size: $font-size*1.75;
   color: $base02;
-  &:hover, &:focus {
-    color: darken($base02, 10%);
-  }
 }
 
 h3 {
   font-size: $font-size*1.5;
   color: lighten($base03, 10%);
-  &:hover, &:focus {
-    color: $base03;
-  }
 }
 
 h4 {
   font-size: $font-size*1.5;
   color: $base04;
-  &:hover, &:focus {
-    color: darken($base04, 10%);
-  }
 }
 
 h5 {
   font-size: $font-size*1.25;
   color: darken($base05, 15%);
-  &:hover, &:focus {
-    color: darken($base05, 30%);
-  }
 }
 
 h6 {
   font-size: $font-size*1.25;
   color: darken($base06, 30%);
-  &:hover, &:focus {
-    color: darken($base06, 40%);
-  }
 }
 
 h1, h2, h3, h4, h5, h6, strong {
   line-height: 1.8;
   @include text-shadow;
-  &:hover, &:focus {
-  @include text-shadow;
-  }
 }
 
 hr {
@@ -161,10 +128,6 @@ time.small {
   .title {
 	color: lighten($base03, 10%);
     border-bottom: 2px dashed lighten($base03, 10%);
-    &:hover, &:focus {
-	  color: $base03;
-      border-bottom: 2px dashed $base03;
-    }
 	a {
 	  color: lighten($base03, 10%);
 	  &:hover, &:focus {
@@ -175,9 +138,6 @@ time.small {
   p, ol, ul, table {
     li {
       margin: 5px 0;
-    }
-    img {
-      @include img;
     }
     code {
 	  @include monospace;
@@ -212,9 +172,6 @@ time.small {
   border-color: rgba(darken($base05, 15%), $alpha*2);
   border-radius: 4px;
   box-shadow: 0 0 3px rgba(darken($base05, 15%), $alpha);
-  &:hover, &:focus {
-    box-shadow: 0 0 5px rgba(darken($base05, 15%), $alpha*2);
-  }
   code {
     @include monospace;
   }
@@ -312,6 +269,15 @@ table {
   &:hover, &:focus {
     color: rgba(darken($base05, 30%), $alpha*5);
   }
+}
+
+img {
+  display: inherit;
+  max-width: 85%;
+  margin: 0 auto;
+  line-height: 1.429;
+  border-radius: 6px;
+  box-shadow: 0 0 1px $base07, 0 0 4px rgba($base08, $alpha*3);
 }
 
 .footer {
