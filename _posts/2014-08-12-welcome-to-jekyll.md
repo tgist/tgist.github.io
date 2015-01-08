@@ -31,7 +31,7 @@ tags: [test, jekyll, welcome]
 
 测试段落代码
 
-{% highlight ruby linenos %}
+```ruby
 /* hello world demo */
 #include <stdio.h>
 int main(int argc, char **argv)
@@ -39,7 +39,7 @@ int main(int argc, char **argv)
         printf("Hello, World!\n");
         return 0;
 }
-{% endhighlight %}
+```
 
 下面是表格
 
