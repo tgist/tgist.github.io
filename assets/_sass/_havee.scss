@@ -85,8 +85,8 @@ time.small {
 .header {
   display: inline;
   .title {
-	display: inline;
-	padding-left: 15px;
+  display: inline;
+  padding-left: 15px;
     font-size: $font-size*2.25;
     @include text-shadow;
     a {
@@ -98,7 +98,7 @@ time.small {
   }
   ul {
     li {
-	  display: inline-block;
+    display: inline-block;
       margin: 4px 0;
       a {
         color: darken($base05, 15%);
@@ -126,23 +126,23 @@ time.small {
   border: 1px solid rgba($base08, $alpha);
   box-shadow: 0 1px 10px rgba($base08, $alpha*2);
   .title {
-	color: lighten($base03, 10%);
+  color: lighten($base03, 10%);
     border-bottom: 2px dashed lighten($base03, 10%);
-	a {
-	  color: lighten($base03, 10%);
-	  &:hover, &:focus {
-	  	color: $base03;
-	  }
-	}
+  a {
+    color: lighten($base03, 10%);
+    &:hover, &:focus {
+      color: $base03;
+    }
+  }
   }
   p, ol, ul, table {
     li {
       margin: 5px 0;
     }
     code {
-	  @include monospace;
+      @include monospace;
       background-color: rgba($base06, $alpha);
-	  border: 1px solid rgba($base08, $alpha*2);
+      border: 1px solid rgba($base08, $alpha*2);
       box-shadow: 0 0 1px rgba($base08, $alpha);
     }
   }
@@ -152,12 +152,12 @@ time.small {
   display: table;
   list-style: none outside none;
   li {
-	display: inline-block;
-	margin: 0 3px;
+    display: inline-block;
+    margin: 0 3px;
     line-height: 1.8;
     a {
       padding: 2px 4px;
-	  border-radius: 4px;
+      border-radius: 4px;
       background-color: rgba(darken($base06, 30%), $alpha*2);
     }
   }
@@ -188,8 +188,8 @@ blockquote {
   border-radius: 4px;
   box-shadow: 0 0 3px rgba($base03, $alpha);
   &:before, &:after {
-	content: "\201C";
-	position: absolute;
+    content: "\201C";
+    position: absolute;
     top: 0;
     left: 0;
     font-family: Times, serif;
@@ -214,12 +214,12 @@ table {
     box-shadow: 0 0 8px rgba(darken($base05, 15%), $alpha);
   }
   thead tr th {
-	vertical-align: bottom;
-	padding: 8px;
+    vertical-align: bottom;
+    padding: 8px;
     color: rgba(darken($base05, 15%), $alpha*5);
-	border-width: 1px 1px 2px;
-	border-style: solid;
-	border-color: rgba(darken($base05, 15%), $alpha*2);
+    border-width: 1px 1px 2px;
+    border-style: solid;
+    border-color: rgba(darken($base05, 15%), $alpha*2);
   }
   tbody tr td {
     vertical-align: middle;
@@ -283,7 +283,7 @@ img {
 .footer {
   padding: 0 15px;
   p {
-	line-height: 1;
+    line-height: 1;
     color: darken($base07, 50% );
     a {
       color: darken($base07, 50% );
