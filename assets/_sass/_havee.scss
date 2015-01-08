@@ -216,7 +216,8 @@ table {
   thead tr th {
     vertical-align: bottom;
     padding: 8px;
-    color: rgba(darken($base05, 15%), $alpha*5);
+    color: rgba(lighten($base05, 30%), $alpha*5);
+    background-color: rgba(darken($base05, 30%), $alpha*5);
     border-width: 1px 1px 2px;
     border-style: solid;
     border-color: rgba(darken($base05, 15%), $alpha*2);
@@ -226,7 +227,7 @@ table {
     padding: 8px;
     border: 1px solid rgba(darken($base05, 15%), $alpha*2);
 	&:hover {
-      background-color: rgba(darken($base05, 30%), $alpha*2);
+      background-color: rgba(darken($base05, 20%), $alpha*2);
     }
   }
   thead > tr {
