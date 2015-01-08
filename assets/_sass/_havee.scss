@@ -37,10 +37,9 @@ body {
   background-color: rgba(darken($base07, 10%), $alpha*2);
   word-break: break-all;
   @include sans-serif;
-}
-
-body * {
-	transition: all .2s;
+  * {
+    transition: all .2s;
+  }
 }
 
 a {
@@ -95,7 +94,7 @@ h6 {
   font-size: $font-size*1.25;
   color: darken($base06, 30%);
   &:hover, &:focus {
-	  color: darken($base06, 40%);
+    color: darken($base06, 40%);
   }
 }
 
@@ -103,7 +102,7 @@ h1, h2, h3, h4, h5, h6, strong {
   line-height: 1.8;
   @include text-shadow;
   &:hover, &:focus {
-	@include text-shadow;
+  @include text-shadow;
   }
 }
 
@@ -183,7 +182,7 @@ time.small {
     border-color: rgba(darken($base05, 15%), $alpha*2);
     border-style: solid;
     border-width: 1px 1px 1px 5px;
-	border-radius: 4px;
+    border-radius: 4px;
     max-width: 95%;
     margin: 10px auto;
     &:hover, &:focus {
