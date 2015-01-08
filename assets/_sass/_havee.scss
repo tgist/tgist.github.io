@@ -19,11 +19,11 @@
 }
 
 @mixin img {
+  display: inherit;
   max-width: 85%;
   margin: 0 auto;
-  display: inherit;
-  border-radius: 6px;
   line-height: 1.429;
+  border-radius: 6px;
   box-shadow: 0 0 5px rgba(lighten($base03, 10%), $alpha);
   &:hover, &:focus {
     box-shadow: 0 0 5px rgba(lighten($base03, 10%), $alpha*2);
@@ -33,9 +33,9 @@
 body {
   font-size: $font-size;
   line-height: 1.6;
+  word-break: break-all;
   color: lighten($base08, 10%);
   background-color: rgba(darken($base07, 10%), $alpha*2);
-  word-break: break-all;
   @include sans-serif;
   * {
     transition: all .2s;
@@ -106,6 +106,10 @@ h1, h2, h3, h4, h5, h6, strong {
   }
 }
 
+hr {
+  border-color: lighten($base03, 10%);
+}
+
 time.small {
   font-size: 50%;
   color: darken($base07, 50% );
@@ -114,9 +118,9 @@ time.small {
 .header {
   display: inline;
   .title {
+	display: inline;
+	padding-left: 15px;
     font-size: $font-size*2.25;
-    padding-left: 15px;
-    display: inline;
     @include text-shadow;
     a {
       color: darken($base05, 15%);
@@ -127,14 +131,14 @@ time.small {
   }
   ul {
     li {
+	  display: inline-block;
       margin: 4px 0;
-      display: inline-block;
       a {
         color: darken($base05, 15%);
         @include text-shadow;
         &:hover, &:focus {
           color: darken($base05, 30%);
-          background: transparent;
+          background-color: transparent;
         }
       }
       form {
@@ -149,18 +153,24 @@ time.small {
 }
 
 .wrapper {
-  border: 1px solid rgba($base08, $alpha);
-  box-shadow: 0 1px 10px rgba($base08, $alpha*2);
-  background: rgba($base07, $alpha*5);
   padding: 10px 10px 20px 10px;
   margin: 5px 0 15px;
+  background-color: rgba($base07, $alpha*5);
+  border: 1px solid rgba($base08, $alpha);
+  box-shadow: 0 1px 10px rgba($base08, $alpha*2);
   .title {
-    color: lighten($base03, 10%);
+	color: lighten($base03, 10%);
     border-bottom: 2px dashed lighten($base03, 10%);
     &:hover, &:focus {
-      color: $base03;
+	  color: $base03;
       border-bottom: 2px dashed $base03;
     }
+	a {
+	  color: lighten($base03, 10%);
+	  &:hover, &:focus {
+	  	color: $base03;
+	  }
+	}
   }
   p, ol, ul, table {
     li {
@@ -170,94 +180,94 @@ time.small {
       @include img;
     }
     code {
+	  @include monospace;
       background-color: rgba($base06, $alpha);
+	  border: 1px solid rgba($base08, $alpha*2);
       box-shadow: 0 0 1px rgba($base08, $alpha);
-      border: 1px solid rgba($base08, $alpha*2);
-      @include monospace;
-    }
-  }
-  .highlight pre {
-    background-color: rgba(darken($base05, 15%), $alpha);
-    box-shadow: 0 0 3px rgba(darken($base05, 15%), $alpha);
-    border-color: rgba(darken($base05, 15%), $alpha*2);
-    border-style: solid;
-    border-width: 1px 1px 1px 5px;
-    border-radius: 4px;
-    max-width: 95%;
-    margin: 10px auto;
-    &:hover, &:focus {
-      box-shadow: 0 0 5px rgba(darken($base05, 15%), $alpha*2);
-    }
-    code {
-      @include monospace;
-    }
-  }
-  blockquote {
-    background-color: rgba(lighten($base03, 10%), $alpha);
-    box-shadow: 0 0 3px rgba($base03, $alpha);
-    border-color: rgba($base03, $alpha*2);
-    border-style: solid;
-    border-width: 1px 1px 1px 5px;
-    border-radius: 4px;
-    max-width: 95%;
-    margin: 15px auto;
-    position: relative;
-    &:before, &:after {
-      color: rgba($base08, $alpha*2);
-      content: "\201C";
-      font-family: Times, serif;
-      font-size: 34px;
-      font-weight: bold;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    &:before {
-      top: 0;
-      left: 0;
-    }
-  }
-  hr {
-    border-color: lighten($base03, 10%);
-  }
-  .tag-box {
-    display: table;
-    list-style: none outside none;
-    li {
-      line-height: 1.8;
-      display: inline-block;
-      margin: 0 3px;
-      a {
-        padding: 2px 4px;
-        background-color: rgba(darken($base06, 30%), $alpha*2);
-        border-radius: 4px;
-      }
     }
   }
 }
 
+.tag-box {
+  display: table;
+  list-style: none outside none;
+  li {
+	display: inline-block;
+	margin: 0 3px;
+    line-height: 1.8;
+    a {
+      padding: 2px 4px;
+	  border-radius: 4px;
+      background-color: rgba(darken($base06, 30%), $alpha*2);
+    }
+  }
+}
+
+.highlight pre {
+  max-width: 95%;
+  margin: 10px auto;
+  background-color: rgba(darken($base05, 15%), $alpha);
+  border-width: 1px 1px 1px 5px;
+  border-style: solid;
+  border-color: rgba(darken($base05, 15%), $alpha*2);
+  border-radius: 4px;
+  box-shadow: 0 0 3px rgba(darken($base05, 15%), $alpha);
+  &:hover, &:focus {
+    box-shadow: 0 0 5px rgba(darken($base05, 15%), $alpha*2);
+  }
+  code {
+    @include monospace;
+  }
+}
+
+blockquote {
+  position: relative;
+  max-width: 95%;
+  margin: 15px auto;
+  background-color: rgba(lighten($base03, 10%), $alpha);
+  border-width: 1px 1px 1px 5px;
+  border-style: solid;
+  border-color: rgba($base03, $alpha*2);
+  border-radius: 4px;
+  box-shadow: 0 0 3px rgba($base03, $alpha);
+  &:before, &:after {
+	content: "\201C";
+	position: absolute;
+    top: 0;
+    left: 0;
+    font-family: Times, serif;
+    font-size: 34px;
+    font-weight: bold;
+    color: rgba($base08, $alpha*2);
+  }
+  &:before {
+    top: 0;
+    left: 0;
+  }
+}
+
 table {
-  margin-bottom: 20px;
   max-width: 100%;
+  margin-bottom: 20px;
   border-collapse: collapse;
-  box-shadow: 0 0 3px rgba(lighten($base03, 10%), $alpha);
   border: 1px solid rgba(lighten($base03, 10%), $alpha);
+  box-shadow: 0 0 3px rgba(lighten($base03, 10%), $alpha);
   &:hover {
     border: 1px solid rgba(lighten($base03, 10%), $alpha);
     box-shadow: 0 0 5px rgba(lighten($base03, 10%), $alpha);
   }
   thead tr th {
+	vertical-align: bottom;
+	padding: 8px;
     color: rgba(darken($base05, 15%), $alpha*5);
-    border: 1px solid rgba(lighten($base03, 10%), $alpha);
-    border-top: 0 none;
-    border-bottom-width: 2px;
-    vertical-align: bottom;
-    padding: 8px;
+	border-width: 1px 1px 2px;
+	border-style: solid;
+	border-color: rgba(lighten($base03, 10%), $alpha);
   }
   tbody tr td {
-    border: 1px solid rgba(lighten($base03, 10%), $alpha);
     vertical-align: middle;
     padding: 8px;
+    border: 1px solid rgba(lighten($base03, 10%), $alpha);
   }
   thead > tr {
     background-color: rgba(darken($base07, 10%), $alpha*2);
@@ -286,15 +296,15 @@ table {
 }
 
 .btn-primary {
-  border: 1px solid rgba(darken($base05, 30%), $alpha);
   background-color: rgba(darken($base05, 15%), $alpha*5);
+  border: 1px solid rgba(darken($base05, 30%), $alpha);
   &:hover, &:focus {
     background-color: rgba(darken($base05, 30%), $alpha*5);
   }
 }
 .btn-primary.disabled {
-  border: 1px solid rgba(darken($base05, 30%), $alpha);
   background-color: rgba(darken($base05, 15%), $alpha*4);
+  border: 1px solid rgba(darken($base05, 30%), $alpha);
 }
 
 .previous > a, .next > a {
@@ -307,8 +317,8 @@ table {
 .footer {
   padding: 0 15px;
   p {
+	line-height: 1;
     color: darken($base07, 50% );
-    line-height: 1;
     a {
       color: darken($base07, 50% );
       &:hover, &:focus {
