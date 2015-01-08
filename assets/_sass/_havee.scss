@@ -207,11 +207,11 @@ table {
   max-width: 100%;
   margin-bottom: 20px;
   border-collapse: collapse;
-  border: 1px solid rgba(lighten($base03, 10%), $alpha);
-  box-shadow: 0 0 3px rgba(lighten($base03, 10%), $alpha);
+  border: 1px solid rgba(darken($base05, 15%), $alpha*2);
+  box-shadow: 0 0 3px rgba(darken($base05, 15%), $alpha);
   &:hover {
-    border: 1px solid rgba(lighten($base03, 10%), $alpha);
-    box-shadow: 0 0 5px rgba(lighten($base03, 10%), $alpha);
+    border: 1px solid rgba(darken($base05, 15%), $alpha*2);
+    box-shadow: 0 0 8px rgba(darken($base05, 15%), $alpha);
   }
   thead tr th {
 	vertical-align: bottom;
@@ -219,12 +219,12 @@ table {
     color: rgba(darken($base05, 15%), $alpha*5);
 	border-width: 1px 1px 2px;
 	border-style: solid;
-	border-color: rgba(lighten($base03, 10%), $alpha);
+	border-color: rgba(darken($base05, 15%), $alpha*2);
   }
   tbody tr td {
     vertical-align: middle;
     padding: 8px;
-    border: 1px solid rgba(lighten($base03, 10%), $alpha);
+    border: 1px solid rgba(darken($base05, 15%), $alpha*2);
   }
   thead > tr {
     background-color: rgba(darken($base07, 10%), $alpha*2);
