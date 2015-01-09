@@ -148,6 +148,82 @@ time.small {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .timeline {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    .tl-content {
+      margin: 5px 10px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+.timeline {
+  display: inline-block;
+  padding: 20px 0px;
+  border-width: 0 0 0 10px;
+  border-style: solid;
+  border-color: rgba(lighten($base03, 10%), $alpha*2);
+  margin: 0 0 0 100px;
+  .tl-year{
+    width: 200px;
+    text-align: center;
+	margin: 10px 0 10px -105px;
+    padding: 0 10px;
+	font-size: $font-size*2;
+    background-color: $base06;
+    border: 1px solid rgba($base04, $alpha*2);
+    border-radius: 4px;
+	box-shadow: 0 0 3px rgba($base04, $alpha);
+  }
+  .tl-month {
+  	width: 60px;
+  	height: 60px;
+  	margin: 10px 0 10px -35px;
+	padding: 5px 0;
+	font-size: $font-size*1.5;
+	text-align: center;
+	color: darken($base07, 10%);
+	background-color: $base03;
+	border: 1px solid rgba($base03, $alpha*2);
+	box-shadow: 0 0 3px rgba($base03, $alpha);
+	border-radius: 50%;
+  }
+  .tl-content {
+    margin: 10px 0 0 40px;
+	.tl-title {
+	  position: relative;
+      list-style: none outside none;
+	  line-height: 2;
+	  margin: 10px 0;
+	  padding: 5px 15px;
+	  width: 100%;
+	  color: darken($base07, 10%);
+      background-color: darken($base05, 15%);
+	  border-radius: 4px;
+	  &:after {
+		content: " ";
+		position: absolute;
+		top: 10px;
+		left: -10px;
+		display: inline-block;
+		border-width: 10px 10px 10px 0px;
+		border-style: solid;
+		border-color: transparent darken($base05, 15%);
+	  }
+	  a {
+		color: darken($base07, 10%);
+		&:hover, &:focus {
+			color: $base07;
+		}
+	  }
+	}
+  }
+}
+}
+
 .tag-box {
   display: table;
   list-style: none outside none;
@@ -193,7 +269,7 @@ blockquote {
     top: 0;
     left: 0;
     font-family: Times, serif;
-    font-size: 34px;
+    font-size: $font-size*2;
     font-weight: bold;
     color: rgba($base08, $alpha*2);
   }
