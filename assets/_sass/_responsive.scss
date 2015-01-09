@@ -72,6 +72,12 @@
         color: darken($base07, 10%);
         background-color: darken($base05, 15%);
         border-radius: 4px;
+        a {
+          color: darken($base07, 10%);
+          &:hover, &:focus {
+            color: $base07;
+          }
+        }
       &:after {
         content: " ";
         position: absolute;
