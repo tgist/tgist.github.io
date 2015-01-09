@@ -161,7 +161,7 @@ time.small {
 
 @media only screen and (min-width: 768px) {
   .timeline {
-    display: inline-block;
+    display: block;
     padding: 20px 0px;
     margin: 0 0 0 100px;
     border-width: 0 0 0 10px;
@@ -199,7 +199,7 @@ time.small {
         line-height: 2;
         margin: 10px 0;
         padding: 5px 15px;
-        min-width: 450px;
+        max-width: 90%;
         color: darken($base07, 10%);
         background-color: darken($base05, 15%);
         border-radius: 4px;
