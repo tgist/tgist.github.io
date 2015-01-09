@@ -163,10 +163,10 @@ time.small {
   .timeline {
     display: inline-block;
     padding: 20px 0px;
+    margin: 0 0 0 100px;
     border-width: 0 0 0 10px;
     border-style: solid;
     border-color: rgba(lighten($base03, 10%), $alpha*2);
-    margin: 0 0 0 100px;
     .tl-year{
       width: 200px;
       text-align: center;
@@ -199,7 +199,7 @@ time.small {
         line-height: 2;
         margin: 10px 0;
         padding: 5px 15px;
-        width: 100%;
+        min-width: 450px;
         color: darken($base07, 10%);
         background-color: darken($base05, 15%);
         border-radius: 4px;
