@@ -82,7 +82,7 @@ task :qrsync do
   filejson = File.join(Dir.pwd, json)
   fileignore = File.join(Dir.pwd, ignore)
 
-  abort("rake aborted: '#{filebin}' file not found.") unless File.exist?(filebin)
+  abort("rake aborted: '#{filebin}' file not found.\nDownload it from 'http://developer.qiniu.com/docs/v6/tools/qrsync.html'\nYour may need to get qiniu account") unless File.exist?(filebin)
 
   unless File.exist?(filejson)
     open(filejson, 'w') do |json|
