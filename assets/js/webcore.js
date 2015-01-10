@@ -1,6 +1,6 @@
 (function($){
 
-  /* External links */
+  /* links */
   $(document).ready(function() {
     $('a[href]').each(function() {
       if (this.href.indexOf(window.location.host) == -1) $(this).attr({target: '_blank' });
@@ -13,6 +13,7 @@
       return false;
     });
   });
+
 
   /* site search */
   $(document).ready(function() {
@@ -34,21 +35,21 @@
       var re = /^([0-9]{4,})-([0-9]{2})-([0-9]{2})T([0-9]{2}):([0-9]{2}):([0-9]{2})(\.[0-9]+)?(Z|([+-])([0-9]{2}):([0-9]{2}))?$/;
       var match = xmlDate.match(re);
       if (!match)
-    return null;
-  var all = match[0];
-  var year = match[1];  var month = match[2];  var day = match[3];
-  var hour = match[4];  var minute = match[5]; var second = match[6];
-  var milli = match[7];
-  var z_or_offset = match[8];  var offset_sign = match[9];
-  var offset_hour = match[10]; var offset_minute = match[11];
-  if (offset_sign) {
-    var direction = (offset_sign == "+" ? 1 : -1);
-    hour =   parseInt(hour)   + parseInt(offset_hour)   * direction;
-    minute = parseInt(minute) + parseInt(offset_minute) * direction;
-  }
-  month = parseInt(month) - 1;
-  var utcDate = Date.UTC(year, month, day, hour, minute, second, (milli || 0));
-  return new Date(utcDate);
+      return null;
+      var all = match[0];
+      var year = match[1];  var month = match[2];  var day = match[3];
+      var hour = match[4];  var minute = match[5]; var second = match[6];
+      var milli = match[7];
+      var z_or_offset = match[8];  var offset_sign = match[9];
+      var offset_hour = match[10]; var offset_minute = match[11];
+      if (offset_sign) {
+        var direction = (offset_sign == "+" ? 1 : -1);
+        hour =   parseInt(hour)   + parseInt(offset_hour)   * direction;
+        minute = parseInt(minute) + parseInt(offset_minute) * direction;
+      }
+      month = parseInt(month) - 1;
+      var utcDate = Date.UTC(year, month, day, hour, minute, second, (milli || 0));
+      return new Date(utcDate);
     }
     function formatDate(date) {
       return date.getFullYear()+"-"+ (date.getMonth()+1)+ '-' + date.getDate();
@@ -99,6 +100,7 @@
 
     });
 
+
   /* loading.png */
   (function() {
     LoadingImage = function(el, options){
@@ -142,4 +144,5 @@
     });
   });
 
-  })(jQuery);
+
+})(jQuery);
