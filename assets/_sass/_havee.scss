@@ -306,11 +306,30 @@ table {
 
 img {
   display: inherit;
-  max-width: 85%;
+  max-width: 100%;
   margin: 0 auto;
   line-height: 1.429;
   border-radius: 6px;
   box-shadow: 0 0 1px $base07, 0 0 4px rgba($base08, $alpha*3);
+}
+
+.spinner-wrap {
+  text-align:center;
+  margin:100px auto;
+  background:transparent;
+  .loading {
+    overflow: hidden;
+    position: relative;
+    display:inline-block;
+    text-align:left;
+    img {
+      border: 0;
+      line-height: 1;
+      border-radius: 0;
+      box-shadow: none;
+      transition: none;
+    }
+  }
 }
 
 .footer {

@@ -8,8 +8,10 @@
       {% include header.html %}
 
       <article class="wrapper">
-        <div id="search-loader" style="display:none;text-align:center">
-          <img src="{{ site.assets_path }}/img/loading.gif">
+        <div id="search-loader" class="spinner-wrap">
+          <div class="loading">
+            <img src="{{ site.assets_path }}/img/loading.png">
+          </div>
         </div>
         <div class="row clearfix">
           {{ content }}
