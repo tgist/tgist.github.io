@@ -8,7 +8,7 @@ title: {{ page.title | xml_escscape }}
   <channel>
     <title>{{ site.title }}</title>
     <description>{{ site.description }}</description>
-    <link>{{ site.baseurl }}{{ site.JB.rss_path }}</link>
+    <link>{{ site.url }}{{ site.JB.rss_path }}</link>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <ttl>1800</ttl>
@@ -17,8 +17,8 @@ title: {{ page.title | xml_escscape }}
     <item>
       <title><![CDATA[{{ post.title }}]]></title>
       <description>{{ post.content | xml_escape }}</description>
-      <link>{{ site.baseurl }}{{ post.url }}</link>
-      <guid>{{ site.baseurl }}{{ post.id }}</guid>
+      <link>{{ site.url }}{{ post.url }}</link>
+      <guid>{{ site.url }}{{ post.id }}</guid>
       <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
     </item>
     {% endfor %}
