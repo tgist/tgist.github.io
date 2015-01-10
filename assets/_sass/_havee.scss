@@ -137,9 +137,6 @@ time.small {
   }
   }
   p, ol, ul, table {
-    li {
-      margin: 5px 0;
-    }
     code {
       @include monospace;
       background-color: rgba($base06, $alpha);
