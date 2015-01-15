@@ -1,4 +1,4 @@
-#### create new post
+#### Create new post
 
     rake post title='A Title'
     or
@@ -8,11 +8,11 @@
 
     rake page name='about.html'
 
-#### define your color
+#### Define your color
 
 Edit the file:  `assets/_sass/_custom.scss`
 
-#### use qiniu cdn
+#### Use qiniu cdn
 
     rake qrsync
 
