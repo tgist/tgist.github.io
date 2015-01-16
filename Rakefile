@@ -76,7 +76,7 @@ end # task :preview
 desc "synchronize qiniu folder to remote server with qiniu sync tool"
 task :qrsync do
   bin = "qrsync"
-  json = "qiniu.json"
+  json = "_qiniu.json"
   ignore = ".gitignore"
   filebin = File.join(Dir.pwd, bin)
   filejson = File.join(Dir.pwd, json)
