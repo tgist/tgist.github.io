@@ -17,9 +17,6 @@ author:
 atom_path: /atom.xml
 rss_path: /rss.xml
 
-cdn: //havee.qiniudn.com
-local: /cdn
-
 # Build settings
 markdown: redcarpet
 redcarpet:
