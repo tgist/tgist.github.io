@@ -1,7 +1,5 @@
 # Site settings
 title: "Jekyll template"
-description: "jekyll template demo."
-keywords: "jekyll, template, demo"
 url: "//ihavee.github.io"
 highlighter: pygments
 paginate: 5

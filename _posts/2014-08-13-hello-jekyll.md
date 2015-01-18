@@ -1,8 +1,6 @@
 ---
 layout: post
 title:  "Hello Jekyll!"
-keywords: "hello, jekyll"
-description: "hello jekyll"
 category: demo
 tags: [test, jekyll, hello]
 ---
