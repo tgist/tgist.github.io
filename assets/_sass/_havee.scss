@@ -22,7 +22,6 @@
 body {
   font-size: $font-size;
   line-height: $line-height * 1.6;
-  word-break: break-all;
   color: lighten($base08, 10%);
   background: darken($base07, 10%);
   @include sans-serif;
@@ -233,7 +232,6 @@ table {
   max-width: 100%;
   margin-bottom: 20px;
   border-collapse: collapse;
-  word-break: unset;
   border: 1px solid rgba(darken($base05, 15%), $alpha * 2);
   box-shadow: 0 0 3px rgba(darken($base05, 15%), $alpha);
   &:hover {
