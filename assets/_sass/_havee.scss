@@ -233,6 +233,7 @@ table {
   max-width: 100%;
   margin-bottom: 20px;
   border-collapse: collapse;
+  word-break: unset;
   border: 1px solid rgba(darken($base05, 15%), $alpha * 2);
   box-shadow: 0 0 3px rgba(darken($base05, 15%), $alpha);
   &:hover {
