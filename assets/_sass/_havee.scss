@@ -22,7 +22,6 @@
 body {
   font-size: $font-size;
   line-height: $line-height * 1.6;
-  word-break: break-all;
   color: lighten($base08, 10%);
   background: darken($base07, 10%);
   @include sans-serif;
