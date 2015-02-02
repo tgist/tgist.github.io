@@ -87,7 +87,7 @@ time.small {
   .title {
   display: inline;
   padding-left: 15px;
-    font-size: $font-size * 2.25;
+    font-size: $font-size * 2;
     @include text-shadow;
     a {
       color: darken($base05, 15%);
