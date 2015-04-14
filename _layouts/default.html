@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    <div class="container">
+      {% include header.html %}
+
+      <article class="wrapper">
+        <div id="search-loader" class="img-wrap">
+          <div class="loading">
+            <img src="{{ site.assets_path }}/img/loading.png">
+          </div>
+        </div>
+        <div class="row clearfix">
+          {{ content }}
+        </div>
+      </article>
+
+      {% include footer.html %}
+    </div>
+
+    <script src="{{ site.assets_path }}/js/jquery.min.js"></script>
+    <script src="{{ site.assets_path }}/js/bootstrap.min.js"></script>
+    <script src="{{ site.assets_path }}/js/webcore.js"></script>
+
+    {% include baidu-analytics.html %}
+    {% if site.comments.duoshuo.name %}
+    <!-- duoshuo Begin -->
+    <script type="text/javascript">
+      var duoshuoQuery = {short_name:"{{ site.comments.duoshuo.name }}"};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] ||
+        document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+    </script>
+    <!-- duoshuo End -->
+    {% endif %}
+  </body>
+</html>

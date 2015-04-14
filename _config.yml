@@ -1,0 +1,44 @@
+# Site settings
+title: "Jekyll template"
+url: "//ihavee.github.io"
+highlighter: pygments
+paginate: 5
+author:
+    name: Havee
+    github: Ihavee
+    email:
+    gitcafe: Havee
+    twitter:
+    facebook:
+    googleplus:
+    weibo:
+atom_path: /atom.xml
+rss_path: /rss.xml
+
+# Build settings
+markdown: redcarpet
+redcarpet:
+    extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough"]
+permalink: /:categories/:year-:month/:title.html
+
+assets_path: /assets
+sass:
+    sass_dir: assets/_sass
+    style: :compressed
+
+# comment
+comments:
+    duoshuo:
+        name:                               # short name
+        rcomments:
+            num: 10
+            avatar: 0
+            time: 0
+            title: 0
+            admin: 0
+            length: 26
+# 网站统计
+analytics:
+    baidu:
+        siteid:                             # 百度统计 js 代码后的字符串
+

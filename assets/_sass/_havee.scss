@@ -1,0 +1,348 @@
+@import "custom";
+@import "responsive";
+
+/* This is base content. */
+
+@mixin sans-serif {
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+
+@mixin serif {
+  font-family: serif;
+}
+
+@mixin monospace {
+  font-family: Monaco, Consolas, Terminal, monospace;
+}
+
+@mixin text-shadow {
+  text-shadow: 0 1px 0px $base07, 0 1px 1px rgba($base08, $alpha*3);
+}
+
+body {
+  font-size: $font-size;
+  line-height: $line-height * 1.6;
+  color: lighten($base08, 10%);
+  background: darken($base07, 10%);
+  @include sans-serif;
+  * {
+    transition: all .2s;
+  }
+}
+
+a {
+  color: darken($base05, 15%);
+  &:hover, &:focus {
+    color: darken($base05, 30%);
+    text-decoration: none;
+  }
+}
+
+h1 {
+  font-size: $font-size * 2;
+  color: $base01;
+}
+
+h2 {
+  font-size: $font-size * 1.75;
+  color: $base02;
+}
+
+h3 {
+  font-size: $font-size * 1.5;
+  color: lighten($base03, 10%);
+}
+
+h4 {
+  font-size: $font-size * 1.5;
+  color: $base04;
+}
+
+h5 {
+  font-size: $font-size * 1.25;
+  color: darken($base05, 15%);
+}
+
+h6 {
+  font-size: $font-size * 1.25;
+  color: darken($base06, 30%);
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  line-height: $line-height * 1.8;
+  @include text-shadow;
+}
+
+hr {
+  border-color: lighten($base03, 10%);
+}
+
+time.small {
+  font-size: 50%;
+  color: darken($base07, 50% );
+}
+
+.header {
+  display: inline;
+  .title {
+  display: inline;
+  padding-left: 15px;
+    font-size: $font-size * 2;
+    @include text-shadow;
+    a {
+      color: darken($base05, 15%);
+      &:hover, &:focus {
+        color: darken($base05, 30%);
+      }
+    }
+  }
+  ul {
+    li {
+    display: inline-block;
+      margin: 4px 0;
+      a {
+        color: darken($base05, 15%);
+        @include text-shadow;
+        &:hover, &:focus {
+          color: darken($base05, 30%);
+          background-color: transparent;
+        }
+      }
+      form {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+.container {
+  padding: 0 5px;
+}
+
+.wrapper {
+  padding: 10px 10px 20px 10px;
+  margin: 5px 0 15px;
+  background-color: rgba($base07, $alpha * 5);
+  border: 1px solid rgba($base08, $alpha);
+  box-shadow: 0 1px 10px rgba($base08, $alpha * 2);
+  .title {
+  color: lighten($base03, 10%);
+    border-bottom: 2px dashed lighten($base03, 10%);
+  a {
+    color: lighten($base03, 10%);
+    &:hover, &:focus {
+      color: $base03;
+    }
+  }
+  }
+  p, ol, ul, table {
+    code {
+      @include monospace;
+      background-color: rgba($base06, $alpha);
+      border: 1px solid rgba($base08, $alpha * 2);
+      box-shadow: 0 0 1px rgba($base08, $alpha);
+    }
+  }
+}
+
+.timeline {
+  display: block;
+  .tl-year{
+    width: 200px;
+    text-align: center;
+    margin: 10px 0 10px -105px;
+    padding: 0 10px;
+    font-size: $font-size * 2;
+    background-color: $base06;
+    border: 1px solid rgba($base04, $alpha * 2);
+    border-radius: 4px;
+    box-shadow: 0 0 3px rgba($base04, $alpha);
+  }
+  .tl-month {
+    width: 60px;
+    height: 60px;
+    margin: 10px 0 10px -35px;
+    padding: 5px 0;
+    font-size: $font-size * 1.5;
+    text-align: center;
+    color: darken($base07, 10%);
+    background-color: $base03;
+    border: 1px solid rgba($base03, $alpha * 2);
+    box-shadow: 0 0 3px rgba($base03, $alpha);
+    border-radius: 50%;
+  }
+}
+
+.tag-box {
+  display: table;
+  list-style: none outside none;
+  li {
+    display: inline-block;
+    margin: 0 3px;
+    line-height: $line-height * 1.8;
+    a {
+      padding: 2px 4px;
+      border-radius: 4px;
+      background-color: rgba(darken($base06, 30%), $alpha * 2);
+    }
+  }
+}
+
+.highlight pre {
+  max-width: 95%;
+  margin: 10px auto;
+  background-color: rgba(darken($base05, 15%), $alpha);
+  border-width: 1px 1px 1px 5px;
+  border-style: solid;
+  border-color: rgba(darken($base05, 15%), $alpha * 2);
+  border-radius: 4px;
+  box-shadow: 0 0 3px rgba(darken($base05, 15%), $alpha);
+  code {
+    @include monospace;
+  }
+}
+
+blockquote {
+  position: relative;
+  max-width: 95%;
+  margin: 15px auto;
+  background-color: rgba(lighten($base03, 10%), $alpha);
+  border-width: 1px 1px 1px 5px;
+  border-style: solid;
+  border-color: rgba($base03, $alpha * 2);
+  border-radius: 4px;
+  box-shadow: 0 0 3px rgba($base03, $alpha);
+  &:before, &:after {
+    content: "\201C";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: Times, serif;
+    font-size: $font-size * 2;
+    font-weight: bold;
+    color: rgba($base08, $alpha * 2);
+  }
+  &:before {
+    top: 0;
+    left: 0;
+  }
+}
+
+table {
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  border: 1px solid rgba(darken($base05, 15%), $alpha * 2);
+  box-shadow: 0 0 3px rgba(darken($base05, 15%), $alpha);
+  &:hover {
+    border: 1px solid rgba(darken($base05, 15%), $alpha * 2);
+    box-shadow: 0 0 8px rgba(darken($base05, 15%), $alpha);
+  }
+  thead tr th {
+    vertical-align: bottom;
+    padding: 8px;
+    color: rgba(lighten($base05, 30%), $alpha * 5);
+    background-color: rgba(darken($base05, 30%), $alpha * 5);
+    border-width: 1px 1px 2px;
+    border-style: solid;
+    border-color: rgba(darken($base05, 15%), $alpha * 2);
+  }
+  tbody tr td {
+    vertical-align: middle;
+    padding: 8px;
+    border: 1px solid rgba(darken($base05, 15%), $alpha * 2);
+	&:hover {
+      background-color: rgba(darken($base05, 20%), $alpha * 2);
+    }
+  }
+  thead > tr {
+    background-color: rgba(darken($base07, 10%), $alpha * 2);
+  }
+  tbody > tr {
+    &:nth-child(2n+1) {
+      background-color: rgba(darken($base05, 15%), $alpha);
+    }
+  }
+  tbody tr {
+    background-color: rgba(darken($base07, 10%), $alpha);
+    &:hover {
+      background-color: rgba(darken($base05, 15%), $alpha * 2);
+    }
+  }
+}
+
+.navbar-toggle {
+  background-color: rgba(darken($base05, 15%), $alpha * 5);
+  &:hover, &:focus {
+    background-color: rgba(darken($base05, 30%), $alpha * 5);
+  }
+  .icon-bar {
+    background-color: rgba(darken($base07, 10%), $alpha * 5);
+  }
+}
+
+.btn-primary {
+  background-color: rgba(darken($base05, 15%), $alpha * 5);
+  border: 1px solid rgba(darken($base05, 30%), $alpha);
+  &:hover, &:focus {
+    background-color: rgba(darken($base05, 30%), $alpha * 5);
+  }
+}
+.btn-primary.disabled {
+  background-color: rgba(darken($base05, 15%), $alpha * 4);
+  border: 1px solid rgba(darken($base05, 30%), $alpha);
+}
+
+.previous > a, .next > a {
+  color: rgba(darken($base05, 15%), $alpha * 5);
+  &:hover, &:focus {
+    color: rgba(darken($base05, 30%), $alpha * 5);
+  }
+}
+
+img {
+  display: inherit;
+  max-width: 100%;
+  margin: 0 auto;
+  line-height: $line-height*1.4;
+  border-radius: 6px;
+  box-shadow: 0 0 1px $base07, 0 0 6px rgba($base08, $alpha * 3);
+}
+
+.img-wrap {
+  text-align:center;
+  margin:100px auto;
+  background:transparent;
+  .loading {
+    overflow: hidden;
+    position: relative;
+    display:inline-block;
+    text-align:left;
+    img {
+      border: 0;
+      line-height: $line-height;
+      border-radius: 0;
+      box-shadow: none;
+      transition: none;
+    }
+  }
+}
+
+.footer {
+  padding: 0 15px;
+  p {
+    line-height: $line-height;
+    color: darken($base07, 50% );
+    a {
+      color: darken($base07, 50% );
+      &:hover, &:focus {
+        color: lighten($base08, 30% );
+      }
+    }
+  }
+}
+
+#search-loader {
+  display: none;
+  text-align: center;
+}
