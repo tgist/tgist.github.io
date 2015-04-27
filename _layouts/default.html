@@ -24,6 +24,15 @@
     <script src="{{ site.assets_path }}/js/jquery.min.js"></script>
     <script src="{{ site.assets_path }}/js/bootstrap.min.js"></script>
     <script src="{{ site.assets_path }}/js/webcore.js"></script>
+    <script src="{{ site.assets_path }}/js/jquery.qrcode.min.js"></script>
+
+    <script type="text/javascript">
+      $("#code").qrcode({
+        width: 150,
+        height: 150,
+        text: "http:{{ site.url }}{{ page.url }}"
+      });
+    </script>
 
     {% include baidu-analytics.html %}
     {% if site.comments.duoshuo.name %}

@@ -2,20 +2,21 @@
 layout: default
 ---
 <div class="col-md-12">
-<h2 class="title"> {{ page.title }} <time class="small">{{ page.date | date: "%Y.%m.%d" }}</time></h2>
-{{ content }}
-<ul class="pager">
-  {% if page.previous %}
-  <li class="previous"><a  href="{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Prev</a></li>
-  {% else %}
-  <li class="previous disabled"><a href="#">&larr; Prev</a></li>
-  {% endif %}
-  {% if page.next %}
-  <li class="next"><a href="{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
-  {% else %}
-  <li class="next disabled"><a href="#">Next &rarr;</a></li>
-  {% endif %}
-</ul>
+  <h2 class="title"> {{ page.title }} <time class="small">{{ page.date | date: "%Y.%m.%d" }}</time></h2>
+  <div id="code" class="qrcode visible-lg"></div>
+  {{ content }}
+  <ul class="pager">
+    {% if page.previous %}
+    <li class="previous"><a  href="{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Prev</a></li>
+    {% else %}
+    <li class="previous disabled"><a href="#">&larr; Prev</a></li>
+    {% endif %}
+    {% if page.next %}
+    <li class="next"><a href="{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
+    {% else %}
+    <li class="next disabled"><a href="#">Next &rarr;</a></li>
+    {% endif %}
+  </ul>
 
 {% include comments.html %}
 </div>

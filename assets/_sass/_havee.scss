@@ -82,6 +82,11 @@ time.small {
   color: darken($base07, 50% );
 }
 
+.qrcode {
+  margin: 0 0 10px 10px;
+  float: right
+}
+
 .header {
   display: inline;
   .title {
