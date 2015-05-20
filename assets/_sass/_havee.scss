@@ -234,7 +234,8 @@ blockquote {
 }
 
 table {
-  max-width: 100%;
+  max-width: 95%;
+  margin-left: 5%;
   margin-bottom: 20px;
   border-collapse: collapse;
   border: 1px solid rgba(darken($base05, 15%), $alpha * 2);
