@@ -83,8 +83,8 @@ time.small {
 }
 
 .qrcode {
-  position: absolute;
-  right: 20px;
+  margin: 0 0 10px 10px;
+  float: right;
 }
 
 .header {
@@ -194,7 +194,6 @@ time.small {
 }
 
 .highlight pre {
-  max-width: 95%;
   margin: 10px auto;
   background-color: rgba(darken($base05, 15%), $alpha);
   border-width: 1px 1px 1px 5px;
@@ -209,7 +208,6 @@ time.small {
 
 blockquote {
   position: relative;
-  max-width: 95%;
   margin: 15px auto;
   background-color: rgba(lighten($base03, 10%), $alpha);
   border-width: 1px 1px 1px 5px;
