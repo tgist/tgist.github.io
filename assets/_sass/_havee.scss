@@ -194,7 +194,7 @@ time.small {
 }
 
 .highlight pre {
-  margin: 10px auto;
+  margin: 10px;
   background-color: rgba(darken($base05, 15%), $alpha);
   border-width: 1px 1px 1px 5px;
   border-style: solid;
@@ -208,7 +208,7 @@ time.small {
 
 blockquote {
   position: relative;
-  margin: 15px auto;
+  margin: 15px 10px;
   background-color: rgba(lighten($base03, 10%), $alpha);
   border-width: 1px 1px 1px 5px;
   border-style: solid;
