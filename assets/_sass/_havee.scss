@@ -187,8 +187,8 @@ time.small {
     line-height: $line-height * 1.8;
     a {
       padding: 2px 4px;
-      border-radius: 4px;
       background-color: rgba(darken($base06, 30%), $alpha * 2);
+      box-shadow: 0 0px 4px rgba($base08, $alpha * 2);
     }
   }
 }
