@@ -1,10 +1,10 @@
 # Site settings
-title: "Jekyll template"
-url: "//ihavee.github.io"
+title: "少侠"
+url: "wdy1184.com"
 highlighter: pygments
 paginate: 5
 author:
-    name: Havee
+    name: 
     github: Ihavee
     email:
     gitcafe: Havee
@@ -29,7 +29,7 @@ sass:
 # comment
 comments:
     duoshuo:
-        name:                               # short name
+        name: wdy1184                               # short name
         rcomments:
             num: 10
             avatar: 0
@@ -40,5 +40,5 @@ comments:
 # 网站统计
 analytics:
     baidu:
-        siteid:                             # 百度统计 js 代码后的字符串
+        siteid: 6bd2acdf55d61504f443dc290136f798                             # 百度统计 js 代码后的字符串
 
