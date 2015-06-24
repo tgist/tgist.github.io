@@ -9,10 +9,10 @@ layout: default
     {% if page.previous %}
     <li class="previous"><a  href="{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Prev</a></li>
     {% else %}
-    <li class="previous disabled"><a href="#">&larr; Prev</a></li>
+    <li class="previous disabled"><a href="#">&larr; {{ page.previous.title | truncatewords:5 }}</a></li>
     {% endif %}
     {% if page.next %}
-    <li class="next"><a href="{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
+    <li class="next"><a href="{{ page.next.url }}" title="{{ page.next.title }}">{{ page.next.title | truncatewords:5 }} &rarr;</a></li>
     {% else %}
     <li class="next disabled"><a href="#">Next &rarr;</a></li>
     {% endif %}
