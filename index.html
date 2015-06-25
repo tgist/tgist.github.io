@@ -7,7 +7,9 @@ layout: default
   {% if post.content contains "<!-- more -->" %}
   {{ post.content | split:'<!-- more -->' | first }}
   {% else %}
-  {{ post.content | strip_html | truncate:400 }}
+  <div class="col-md-12">
+    {{ post.content | strip_html | truncate:400 }}
+  </div>
   {% endif %}
   {% endfor %}
 
