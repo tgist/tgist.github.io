@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Apache与PHP的对应
-comments: true
-category: life
+category: tech
+tags: [apache, php]
 ---
 
 # apache-php  

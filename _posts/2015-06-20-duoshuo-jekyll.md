@@ -1,7 +1,6 @@
 ---
 layout: post
 title: 多说评论与jekyll的结合
-comments: true
 category: tech
 ---
 
