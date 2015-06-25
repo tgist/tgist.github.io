@@ -7,7 +7,7 @@ layout: default
   {% if post.content contains "<!-- more -->" %}
   {{ post.content | split:'<!-- more -->' | first }}
   {% else %}
-  {{ post.content | strip_html | truncate:200 }}
+  {{ post.content | strip_html | truncate:400 }}
   {% endif %}
   {% endfor %}
 
