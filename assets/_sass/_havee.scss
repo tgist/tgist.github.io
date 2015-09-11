@@ -332,17 +332,15 @@ img {
 }
 
 .tinysou-widget .autocomplete {
-  background-color: transparent;
   ul {
-    background-color: rgba($base07, $alpha * 5);
     li {
       p.title {
         color: darken($base05, 15%);
       }
     }
     li.active {
-		border-top: 1px solid $base03;
-		border-bottom: 1px solid $base03;
+      border-top: 1px solid $base03;
+      border-bottom: 1px solid $base03;
       background: transparent linear-gradient(darken($base05, 15%), darken($base05, 30%)) repeat scroll 0% 0%;
     }
   }
