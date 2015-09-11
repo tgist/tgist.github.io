@@ -113,9 +113,6 @@ time.small {
           background-color: transparent;
         }
       }
-      form {
-        margin-top: 15px;
-      }
     }
   }
 }
@@ -146,6 +143,14 @@ time.small {
       background-color: rgba($base06, $alpha);
       border: 1px solid rgba($base08, $alpha * 2);
       box-shadow: 0 0 1px rgba($base08, $alpha);
+    }
+  }
+}
+
+aside {
+  section {
+    form {
+      margin-top: 25px;
     }
   }
 }
