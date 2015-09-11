@@ -8,11 +8,6 @@
       {% include header.html %}
 
       <article class="wrapper">
-        <div id="search-loader" class="img-wrap">
-          <div class="loading">
-            <img src="{{ site.assets_path }}/img/loading.png">
-          </div>
-        </div>
         <div class="row clearfix">
           {{ content }}
         </div>
@@ -21,12 +16,12 @@
       {% include footer.html %}
     </div>
 
-    <script src="{{ site.assets_path }}/js/jquery.min.js"></script>
-    <script src="{{ site.assets_path }}/js/bootstrap.min.js"></script>
-    <script src="{{ site.assets_path }}/js/webcore.js"></script>
-    <script src="{{ site.assets_path }}/js/jquery.qrcode.min.js"></script>
+    <script src="{% if site.cdn %}{{ site.cdn }}{% else %}{{ site.assets_path }}{% endif %}/js/jquery.min.js"></script>
+    <script src="{% if site.cdn %}{{ site.cdn }}{% else %}{{ site.assets_path }}{% endif %}/js/bootstrap.min.js"></script>
+    <script src="{% if site.cdn %}{{ site.cdn }}{% else %}{{ site.assets_path }}{% endif %}/js/webcore.js"></script>
+    <script src="{% if site.cdn %}{{ site.cdn }}{% else %}{{ site.assets_path }}{% endif %}/js/jquery.qrcode.min.js"></script>
 
-    <script type="text/javascript">
+    <script>
       $("#code").qrcode({
         width: 150,
         height: 150,
@@ -37,7 +32,7 @@
     {% include baidu-analytics.html %}
     {% if site.comments.duoshuo.name %}
     <!-- duoshuo Begin -->
-    <script type="text/javascript">
+    <script>
       var duoshuoQuery = {short_name:"{{ site.comments.duoshuo.name }}"};
       (function() {
         var ds = document.createElement('script');
@@ -50,5 +45,23 @@
     </script>
     <!-- duoshuo End -->
     {% endif %}
+    <!-- tinysou Begin -->
+  <script>
+  var option = {
+    engineKey: '{{ site.search.tinysou.engineKey }}',
+  };
+  (function(w,d,t,u,n,s,e){
+    s = d.createElement(t);
+    s.src = u;
+    s.async = 1;
+    w[n] = function(r){
+      w[n].opts = r;
+    };
+    e = d.getElementsByTagName(t)[0];
+    e.parentNode.insertBefore(s, e);
+  })(window,document,'script','//tinysou-cdn.b0.upaiyun.com/ts.js','_ts');
+  _ts(option);
+  </script>
+  <!-- tinysou End -->
   </body>
 </html>

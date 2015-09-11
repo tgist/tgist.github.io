@@ -312,25 +312,6 @@ img {
   box-shadow: 0 0 1px $base07, 0 0 6px rgba($base08, $alpha * 3);
 }
 
-.img-wrap {
-  text-align:center;
-  margin:100px auto;
-  background:transparent;
-  .loading {
-    overflow: hidden;
-    position: relative;
-    display:inline-block;
-    text-align:left;
-    img {
-      border: 0;
-      line-height: $line-height;
-      border-radius: 0;
-      box-shadow: none;
-      transition: none;
-    }
-  }
-}
-
 .footer {
   padding: 0 15px;
   p {
@@ -343,9 +324,4 @@ img {
       }
     }
   }
-}
-
-#search-loader {
-  display: none;
-  text-align: center;
 }
