@@ -23,6 +23,8 @@ body {
   font-size: $font-size;
   line-height: $line-height * 1.6;
   color: lighten($base08, 10%);
+  word-break: break-all;
+  word-wrap: break-word;
   background: darken($base07, 10%);
   @include sans-serif;
   * {
