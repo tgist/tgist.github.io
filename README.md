@@ -1,3 +1,4 @@
+博客不在github上面写了，回到新浪博客。
 #### Create new post
 
     rake post title='A Title'
