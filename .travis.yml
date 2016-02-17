@@ -1,0 +1,17 @@
+before_script: bundle install
+script: jekyll build && htmlproof ./_site
+cache: bundle
+language: ruby
+sudo: false
+
+rvm:
+  - 2.3.0
+  - 2.0.0
+
+branches:
+  only:
+    - master
+
+env:
+  global:
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
