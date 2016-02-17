@@ -21,7 +21,7 @@ redcarpet:
     extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough"]
 permalink: /:categories/:year-:month/:title.html
 gems: [jekyll-paginate]
-
+exclude: [vendor]
 assets_path: /assets
 sass:
     sass_dir: assets/_sass
