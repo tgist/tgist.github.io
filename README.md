@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/iHavee/iHavee.github.io.svg?branch=master)](https://travis-ci.org/iHavee/iHavee.github.io)
+
 #### Create new post
 
     rake post title='A Title'
