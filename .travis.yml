@@ -1,5 +1,5 @@
 before_script: bundle install
-script: jekyll build && htmlproof ./_site
+script: jekyll build
 cache: bundle
 language: ruby
 sudo: false
