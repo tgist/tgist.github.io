@@ -1,7 +1,7 @@
 # Site settings
 title: "Jekyll template"
 url: "//ihavee.github.io"
-highlighter: pygments
+highlighter: rouge
 paginate: 5
 author:
     name: Havee
