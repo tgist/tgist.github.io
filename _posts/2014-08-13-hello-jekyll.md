@@ -29,7 +29,7 @@ tags: [test, jekyll, hello]
 
 测试段落代码
 
-```ruby
+~~~ruby
 /* hello world demo */
 #include <stdio.h>
 int main(int argc, char **argv)
@@ -37,7 +37,7 @@ int main(int argc, char **argv)
         printf("Hello, World!\n");
         return 0;
 }
-```
+~~~
 
 下面是表格
 
