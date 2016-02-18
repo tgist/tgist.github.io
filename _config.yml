@@ -16,9 +16,11 @@ atom_path: /atom.xml
 rss_path: /rss.xml
 
 # Build settings
-markdown: redcarpet
-redcarpet:
-    extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough"]
+markdown: kramdown
+kramdown:
+  input: GFM
+  toc_levels: 1..6
+  enable_coderay: false
 permalink: /:categories/:year-:month/:title.html
 gems: [jekyll-paginate]
 exclude: [vendor]
