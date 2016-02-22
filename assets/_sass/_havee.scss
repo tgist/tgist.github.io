@@ -3,18 +3,6 @@
 
 /* This is base content. */
 
-@mixin sans-serif {
-  font-family: Tahoma, Arial, Helvetica, sans-serif;
-}
-
-@mixin serif {
-  font-family: serif;
-}
-
-@mixin monospace {
-  font-family: Monaco, Consolas, Terminal, monospace;
-}
-
 @mixin text-shadow {
   text-shadow: 0 1px 0px $base07, 0 1px 1px rgba($base08, $alpha*3);
 }
@@ -333,17 +321,13 @@ img {
   }
 }
 
-.tinysou-widget .autocomplete {
-  ul {
-    li {
-      p.title {
-        color: darken($base05, 15%);
-      }
-    }
-    li.active {
-      border-top: 1px solid $base03;
-      border-bottom: 1px solid $base03;
-      background: transparent linear-gradient(darken($base05, 15%), darken($base05, 30%)) repeat scroll 0% 0%;
-    }
+.epkeygen {
+    padding: 10px auto;
+    margin: 0 auto;
+  h4 {
+    text-align: center;
+  }
+  span {
+    font-size: $font-size;
   }
 }

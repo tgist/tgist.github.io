@@ -1,5 +1,6 @@
-/* define your color & font-size */
+/* define your color & font-family & font-size */
 
+/* font color */
 $base01: red;
 $base02: fuchsia;
 $base03: green;
@@ -11,5 +12,19 @@ $base08: black;
 
 $alpha: 1/6;
 
+/* font-size */
 $font-size: 16px;
 $line-height: 1;
+
+/* font-family */
+@mixin sans-serif {
+  font-family: "PingFang SC", Tahoma, "Microsoft Yahei", sans-serif;
+}
+
+@mixin serif {
+  font-family: serif;
+}
+
+@mixin monospace {
+  font-family: Monaco, Consolas, Terminal, monospace;
+}
