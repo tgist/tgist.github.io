@@ -26,5 +26,5 @@ $line-height: 1;
 }
 
 @mixin monospace {
-  font-family: Monaco, Consolas, Terminal, "Dejavu Sans Mono", monospace;
+  font-family: Monaco, "Dejavu Sans Mono", Consolas, Terminal, monospace;
 }
