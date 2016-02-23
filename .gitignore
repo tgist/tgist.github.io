@@ -1,12 +1,8 @@
 _site
 Gemfile.lock
-
-Thumbs.db
-.DS_Store
-
 !.gitkeep
-
 .sass-cache
-
+.DS_Store
+.Spotlight-v100
 qrsync
 _qiniu.json
