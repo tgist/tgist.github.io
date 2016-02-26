@@ -1,5 +1,10 @@
 [![Build Status](https://travis-ci.org/iHavee/iHavee.github.io.svg?branch=master)](https://travis-ci.org/iHavee/iHavee.github.io)
 
+require:
+
+- jekyll >= 3.0.3
+- jekyll-paginate >= 1.1.0
+
 #### Create new post
 
     rake post title='A Title'
