@@ -1,7 +1,6 @@
 # Site settings
 title: "Jekyll template"
 url: "//ihavee.github.io"
-highlighter: rouge
 paginate: 5
 author:
     name: Havee
@@ -16,7 +15,6 @@ atom_path: /atom.xml
 rss_path: /rss.xml
 
 # Build settings
-markdown: kramdown
 kramdown:
     input: GFM
 permalink: /:categories/:year-:month/:title.html
