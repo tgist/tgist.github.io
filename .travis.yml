@@ -10,7 +10,7 @@ rvm:
 
 branches:
   only:
-    - master
+    - sources
 
 env:
   global:
