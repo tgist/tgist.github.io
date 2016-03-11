@@ -29,17 +29,17 @@ a {
 }
 
 h1 {
-  font-size: $font-size * 2;
+  font-size: $font-size * 2.3;
   color: $base01;
 }
 
 h2 {
-  font-size: $font-size * 1.75;
+  font-size: $font-size * 2;
   color: $base02;
 }
 
 h3 {
-  font-size: $font-size * 1.5;
+  font-size: $font-size * 1.75;
   color: lighten($base03, 10%);
 }
 
@@ -54,7 +54,7 @@ h5 {
 }
 
 h6 {
-  font-size: $font-size * 1.25;
+  font-size: $font-size;
   color: darken($base06, 30%);
 }
 
@@ -67,11 +67,6 @@ hr {
   border-color: lighten($base03, 10%);
 }
 
-time.small {
-  font-size: 50%;
-  color: darken($base07, 50% );
-}
-
 .qrcode {
   margin: 0 0 10px 10px;
   float: right;
@@ -82,7 +77,7 @@ time.small {
   .title {
     display: inline;
     padding-left: 15px;
-    font-size: $font-size * 2;
+    font-size: $font-size * 2.5;
     @include text-shadow;
     a {
       color: darken($base05, 15%);
@@ -112,20 +107,27 @@ time.small {
 }
 
 .wrapper {
-  padding: 10px 10px 20px 10px;
+  display: block;
+  padding: 10px;
   margin: 5px 0 15px;
   background-color: rgba($base07, $alpha * 5);
   border: 1px solid rgba($base08, $alpha);
   box-shadow: 0 1px 10px rgba($base08, $alpha * 2);
-  .title {
-  color: lighten($base03, 10%);
-    border-bottom: 2px dashed lighten($base03, 10%);
-  a {
-    color: lighten($base03, 10%);
-    &:hover, &:focus {
-      color: $base03;
-    }
+  .col-md-9 {
+    padding-left: 0;
   }
+  .col-md-3 {
+    padding-right: 0;
+  }
+  .title {
+    color: lighten($base03, 10%);
+    border-bottom: 2px dashed lighten($base03, 10%);
+    a {
+      color: lighten($base03, 10%);
+      &:hover, &:focus {
+        color: $base03;
+      }
+    }
   }
   p, ol, ul, table {
     code {
@@ -135,6 +137,11 @@ time.small {
       box-shadow: 0 0 1px rgba($base08, $alpha);
     }
   }
+}
+
+time.small {
+  font-size: 50%;
+  color: darken($base07, 50% );
 }
 
 aside {
@@ -179,7 +186,7 @@ aside {
   li {
     display: inline-block;
     margin: 0 3px;
-    line-height: $line-height * 1.8;
+    line-height: $line-height * 2;
     a {
       padding: 2px 4px;
       background-color: rgba(darken($base06, 30%), $alpha * 2);
@@ -308,6 +315,7 @@ img {
 }
 
 .footer {
+  display: block;
   padding: 0 15px;
   p {
     line-height: $line-height;

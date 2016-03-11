@@ -1,8 +1,8 @@
 ---
 layout: default
 ---
-<div class="col-md-12">
-  <h2 class="title"> {{ page.title }} <time class="small">{{ page.date | date: "%Y.%m.%d" }}</time></h2>
+
+  <h3 class="title"> {{ page.title }} <time class="small">{{ page.date | date: "%Y.%m.%d" }}</time></h3>
   <div id="code" class="qrcode visible-lg"></div>
   {{ content }}
   <ul class="pager">
@@ -19,4 +19,4 @@ layout: default
   </ul>
 
 {% include comments.html %}
-</div>
+
