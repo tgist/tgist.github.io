@@ -28,7 +28,7 @@ sass:
 # comment
 comments:
     duoshuo:
-        name:                               # short name
+        name: shortname                      # short name
         rcomments:
             num: 10
             avatar: 0
