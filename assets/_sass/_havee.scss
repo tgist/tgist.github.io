@@ -205,6 +205,9 @@ pre {
   box-shadow: 0 0 3px rgba(darken($base05, 15%), $alpha);
   code {
     @include monospace;
+    .err {
+      border-width: 0;
+    }
   }
 }
 
