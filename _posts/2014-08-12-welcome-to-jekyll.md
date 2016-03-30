@@ -5,31 +5,33 @@ category: demo
 tags: [test, jekyll, welcome]
 ---
 
-# 测试 h1
+# 这是 h1
 
-## 测试 h2
+## 这是 h2
 
-### 测试 h3
+### 这是 h3
 
-#### 测试 h4
+#### 这是 h4
 
-##### 测试 h5
+##### 这是 h5
 
-###### 测试 h6
+###### 这是 h6
 
-**测试粗体**
+**这是粗体**
 
-*测试斜体*
+*这是斜体*
 
->测试引用
+<!-- more -->
+
+>这是引用
 
 - - -
 
-测试行代码 `_post`
+`这是 _post`
 
 测试段落代码
 
-~~~ruby
+```ruby
 /* hello world demo */
 #include <stdio.h>
 int main(int argc, char **argv)
@@ -37,7 +39,7 @@ int main(int argc, char **argv)
         printf("Hello, World!\n");
         return 0;
 }
-~~~
+```
 
 下面是表格
 
