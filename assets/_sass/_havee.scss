@@ -88,8 +88,7 @@ hr {
   }
   ul {
     li {
-    display: inline-block;
-      margin: 4px 0;
+      display: inline-block;
       a {
         color: darken($base05, 15%);
         @include text-shadow;
