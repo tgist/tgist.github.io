@@ -14,6 +14,23 @@
   }
 }
 
+@media only screen and (min-width: 768px) {
+  article > .col-md-9 >.title, article > .title {
+    position: relative;
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 5px;
+      left: -20px;
+      display: inline-block;
+      width: 10px;
+      height: 40px;
+      background-color: rgba(lighten($base03, 10%), $alpha*4);
+      border-radius: 4px 0 0 4px;
+    }
+  }
+}
+
 @media only screen and (min-width: 1200px) {
   .timeline {
     padding: 20px 0px;
@@ -71,21 +88,21 @@
     border-style: solid;
     border-color: rgba(lighten($base03, 10%), $alpha*2);
     .tl-title {
-        position: relative;
-        list-style: none outside none;
-        line-height: 2;
-        padding: 5px 15px;
-        margin: 5px 0;
-        max-width: 90%;
+      position: relative;
+      list-style: none outside none;
+      line-height: 2;
+      padding: 5px 15px;
+      margin: 5px 0;
+      max-width: 90%;
+      color: darken($base07, 10%);
+      background-color: darken($base05, 15%);
+      border-radius: 4px;
+      a {
         color: darken($base07, 10%);
-        background-color: darken($base05, 15%);
-        border-radius: 4px;
-        a {
-          color: darken($base07, 10%);
-          &:hover, &:focus {
-            color: $base07;
-          }
+        &:hover, &:focus {
+          color: $base07;
         }
+      }
       &:after {
         content: " ";
         position: absolute;
