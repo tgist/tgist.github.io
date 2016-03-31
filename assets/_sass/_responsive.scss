@@ -25,8 +25,9 @@
       display: inline-block;
       width: 10px;
       height: 40px;
-      background-color: rgba(lighten($base03, 10%), $alpha*4);
+      background-color: rgba(lighten($base03, 10%), $alpha * 4);
       border-radius: 4px 0 0 4px;
+      box-shadow: -2px 0 4px rgba($base08, $alpha * 2);
     }
   }
 }
@@ -37,7 +38,7 @@
     margin: 0 0 0 564px;
     border-width: 0 0 0 10px;
     border-style: solid;
-    border-color: rgba(lighten($base03, 10%), $alpha*2);
+    border-color: rgba(lighten($base03, 10%), $alpha * 2);
     .tl-title {
       position: relative;
       list-style: none outside none;
@@ -86,7 +87,7 @@
     margin: 0 0 0 100px;
     border-width: 0 0 0 10px;
     border-style: solid;
-    border-color: rgba(lighten($base03, 10%), $alpha*2);
+    border-color: rgba(lighten($base03, 10%), $alpha * 2);
     .tl-title {
       position: relative;
       list-style: none outside none;
