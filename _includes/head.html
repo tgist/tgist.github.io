@@ -8,9 +8,10 @@
 
   <!-- fav and touch icons  -->
   <link rel="shortcut icon" href="{{ site.assets_path }}/images/favicon.png">
-  <link rel="apple-touch-icon" href="{{ site.assets_path }}/images/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="{{ site.assets_path }}/images/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="{{ site.assets_path }}/images/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" href="{{ site.assets_path }}/images/touch-icon-iphone.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ site.assets_path }}/images/touch-icon-ipad.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ site.assets_path }}/images/touch-icon-iphone-retina.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ site.assets_path }}/images/touch-icon-ipad-retina.png">
 
   <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html,'' }}">
   <link rel="stylesheet" href="{{ site.assets_path }}/css/style.css" media="all">
@@ -22,4 +23,14 @@
   {% if site.webmaster.baidu.verify %}<meta name="baidu-site-verification" content="{{ site.webmaster.baidu.verify }}" />{% endif %}
   {% if site.webmaster.google.verify %}<meta name="google-site-verification" content="{{ site.webmaster.google.verify }}" />{% endif %}
   {% if site.webmaster.bing.verify %}<meta name="msvalidate.01" content="{{ site.webmaster.bing.verify }}" />{% endif %}
+
+  <script>
+    var domain = "havee.me";
+    var current = ["www.havee.me", "hae.coding.me"];
+    for ( var i = 0; i < current.length; i++ ) {
+      if ( document.location.host == current[i] ) {
+        document.location.href = "\/\/" + domain + this.location.pathname;
+      }
+    }
+  </script>
 </head>
