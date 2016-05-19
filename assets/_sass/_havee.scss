@@ -243,6 +243,7 @@ table {
   border-collapse: collapse;
   border: 1px solid rgba(darken($base05, 15%), $alpha * 2);
   box-shadow: 0 0 3px rgba(darken($base05, 15%), $alpha);
+  word-break: normal;
   &:hover {
     border: 1px solid rgba(darken($base05, 15%), $alpha * 2);
     box-shadow: 0 0 8px rgba(darken($base05, 15%), $alpha);
