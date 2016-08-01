@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+    jekyll:
+        container_name: jekyll
+        image: registercn/jekyll
+        ports:
+            - "4000:4000"
+        volumes:
+            - ./:/var/www
+        restart: always
