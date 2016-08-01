@@ -1,6 +1,8 @@
 [![Build Status](https://travis-ci.org/iHavee/iHavee.github.io.svg?branch=sources)](https://travis-ci.org/iHavee/iHavee.github.io)
 
-require:
+### Generic
+
+#### require:
 
 - jekyll >= 3.0.3
 - jekyll-paginate >= 1.1.0
@@ -24,6 +26,17 @@ Edit the file:  `assets/_sass/_custom.scss`
     rake qrsync
 
 Then, follow tips to do
+
+### Docker Compose
+
+    docker-compose up -d
+
+#### Create new post
+
+    docker exec -ti jekyll rake post title='A Title'
+    or
+    docker exec -ti jekyll rake post title="A Title" [date="2012-02-09"] [tags=[tag1,tag2]] [category="category"]
+    ...
 
 #### License
 
