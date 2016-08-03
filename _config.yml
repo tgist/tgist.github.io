@@ -19,7 +19,7 @@ kramdown:
     input: GFM
 permalink: /:categories/:year-:month/:title.html
 gems: [jekyll-paginate]
-exclude: [Gemfile, Gemfile.lock, qrsync, Rakefile]
+exclude: [Gemfile, Gemfile.lock, qrsync, Rakefile, docker-compose.yml]
 assets_path: /assets
 sass:
     sass_dir: assets/_sass
